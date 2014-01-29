@@ -46,23 +46,11 @@ jQuery(document).ready(function() {
       var content = '<h1>' + layer.feature.properties.name + '</h1>'
           '<h2>' + layer.feature.properties.street + ',' + layer.feature.properties.city + '<\/h2>' +
           '<h3>' + layer.feature.properties.description + ',' + '<\/h3>' ;
-      layer.bindPopup(content);
-      
+      layer.bindPopup(content, {
+        closeButton: false });
+      });
+    });
   });
- });
 });
-});
-
 
 </script>
-
-
- <!--  //  map.markerLayer.on('click',function(e) {
-    
-  //   var info = '<h2>' + street + '</h2>' +
-  //   '<p>' + description + '</p>';
-  //   document.getElementById('info').innerHTML = info;
-  // });
-  //  map.on('click',function(e){
-  //   document.getElementById('info').innerHTML = '';
-  // }); -->
