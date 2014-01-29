@@ -1,9 +1,44 @@
-<div class="logo">
-  <h1>Fresh Finder</h1>
+
+<div id="sb-site">
+  <div id="map"></div>
 </div>
 
-<div id="map"></div>
-<!-- <div id='info'></div> -->
+<div class="sb-slidebar sb-left">
+<!-- a class="open-list" href="#"> -->
+    <img alt="see farmers market list" height="22" src="assets/list.svg" /><!-- </a> -->
+    
+    <div class="wrapper">
+      <div class="intro">
+        <header>
+          <h1 class="logo">Fresh Finder</h1>
+            <p>Search for fresh food in your neighborhood</p>
+        </header>
+      </div>
+
+    <article>
+      <a class="close-list" href="#">
+        <img alt="list" src="assets/close.svg" /></a>
+          <dl>
+            <dt><img alt="leafy" src="assets/leaf-green.png" /></dt>
+          <dd class="food">get your grub on...</dd>
+          </dl>
+            <li>
+              <div class="type">
+                <img alt="leaf" src="assets/leaf-yellow.png" />
+              </div>
+
+            <div class="main-info">
+              <h2>market name</h2>
+              <p>marketdash&ndash;</p>
+            </div>
+            <img alt="right-arrow" src="assets/right-arrow.svg" />
+          </li>
+</article>
+    <footer>
+      <small>&copy; 2013 gschool</small>
+    </footer>
+  </div>
+</div>
 
 <script src="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js"></script>
 <link href="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css" rel="stylesheet" />
@@ -22,7 +57,7 @@ jQuery(document).ready(function() {
      
      var name = val.name;
      var id = val.id;
-
+     
      var markerLayer = L.mapbox.markerLayer({
         type: 'Feature',
         geometry: {
@@ -40,12 +75,9 @@ jQuery(document).ready(function() {
           'marker-color': '#9CFF00'
         }
       }).addTo(mappy);
-    
+
      markerLayer.eachLayer(function (layer) {
-      console.log(layer.feature.properties);
-      var content = '<h1>' + layer.feature.properties.name + '</h1>'
-          '<h2>' + layer.feature.properties.street + ',' + layer.feature.properties.city + '<\/h2>' +
-          '<h3>' + layer.feature.properties.description + ',' + '<\/h3>' ;
+      var content =  '<strong>'+ layer.feature.properties.name + '</strong>' + '</br>' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')';
       layer.bindPopup(content, {
         closeButton: false });
       });
@@ -54,3 +86,16 @@ jQuery(document).ready(function() {
 });
 
 </script>
+
+<!-- function resetColors() {
+        for (var i = 0; i < markerLayer.length; i++) {
+          markerLayer[i].feature.properties['marker-color'] = markerLayer[i].feature.properties['old-color'] || markerLayer[i].feature.properties['marker-color'];
+        }
+       }
+        layer.on('click', function(e) {
+            resetColors();
+            console.log(e);
+          e.feature.properties['old-color'] = e.feature.properties['marker-color'];
+          e.feature.properties['marker-color'] = '#000';
+          });
+      mappy.on('click', resetColors); -->
