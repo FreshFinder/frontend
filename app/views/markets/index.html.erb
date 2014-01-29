@@ -4,6 +4,36 @@
   <h1>Fresh Finder</h1>
 </div>
 
+<script src="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js"></script>
+<link href="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css" rel="stylesheet" />
 
 <script>
-  
+jQuery(document).ready(function() {
+
+ var mapper = L.mapbox.map("map", "rsoden.map-wjcj2udt").setView([40.52086, -100.679523], 5); 
+ var marketData = "http://localhost:5555/api/v1/markets.json?address=true";
+ $.getJSON( marketData, function( data ) {
+
+  $.each(data, function(index, val) {
+
+   var lng =  parseFloat(val.address.long),
+       lat =  parseFloat(val.address.lat);
+
+   L.mapbox.markerLayer({
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [lat, lng]
+    },
+    properties: {
+      name: 'A Single Marker',
+      description: 'Just one of me',
+      'marker-size': 'large',
+      'marker-color': '#f0a'
+    }
+  }).addTo(mapper);
+ });
+});
+});
+
+</script>
