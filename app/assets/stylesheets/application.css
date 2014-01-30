@@ -27,3 +27,9 @@ body { margin:0; padding:0; }
 
   }
 
+  .leaflet-popup-content-wrapper {border-radius: 10px;}
+  .leaflet-popup-content-wrapper {padding: 0;}
+  .leaflet-popup-content {margin: 0;}
+  .leaflet-popup-content p {margin: 0;}
+  .leaflet-popup-content-wrapper, .leaflet-custom-popup {border-radius: 10px}
+  .leaflet-custom-popup {padding: 1em; }

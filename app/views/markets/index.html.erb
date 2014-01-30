@@ -2,6 +2,7 @@
   <nav class="st-menu st-effect-12" id="menu-12">
     <h2 class="icon icon-stack">Results</h2>
     <ul>
+
       <li><a class="icon icon-data" href="#">Market</a></li>
       <li><a class="icon icon-location" href="#">Products</a></li>
       <li><a class="icon icon-study" href="#">Study</a></li>
@@ -29,62 +30,5 @@
     </div>
 <script src="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js"></script>
 <link href="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css" rel="stylesheet" /> 
-<script>
-jQuery(document).ready(function() {
-
-var mappy = L.mapbox.map("map", "rsoden.map-wjcj2udt", { zoomControl: false }).setView([40.52086, -100.679523], 5); 
-new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
-
-var marketData = "http://localhost:5555/api/v1/markets.json?address=true";
-
-$.getJSON( marketData, function( data ) {
-
-  $.each(data, function(index, val) {
-     var lng =  parseFloat(val.address.long),
-     lat =  parseFloat(val.address.lat);
-     
-     var name = val.name;
-     var id = val.id;
-     
-     var markerLayer = L.mapbox.markerLayer({
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [lng , lat]
-        },
-        properties: {
-          market_id: id,
-          name: name,
-          description: val.address.description,
-          street: val.address.street,
-          city: val.address.city,
-          name: val.name,
-          'marker-size': 'small',
-          'marker-color': '#9CFF00'
-        }
-      }).addTo(mappy);
-
-     markerLayer.eachLayer(function (layer) {
-      var content =  '<strong>'+ layer.feature.properties.name + '</strong>' + '</br>' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')';
-      layer.bindPopup(content, {
-        closeButton: false });
-      });
-    });
-  });
-});
-</script>
 <script src="assets/classie.js"></script>
 <script src="assets/sidebarEffects.js"></script>
-
-<!-- function resetColors() {
-        for (var i = 0; i < markerLayer.length; i++) {
-          markerLayer[i].feature.properties['marker-color'] = markerLayer[i].feature.properties['old-color'] || markerLayer[i].feature.properties['marker-color'];
-        }
-       }
-        layer.on('click', function(e) {
-            resetColors();
-            console.log(e);
-          e.feature.properties['old-color'] = e.feature.properties['marker-color'];
-          e.feature.properties['marker-color'] = '#000';
-          });
-      mappy.on('click', resetColors); -->
