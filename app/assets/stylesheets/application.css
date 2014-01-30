@@ -21,15 +21,19 @@ body { margin:0; padding:0; }
   width:100%; 
 }
 
+.smaller{
+  font-size: 8px;
+  color: #000;
+}
+
 .stacker {
   width: 20px;
   height: 20px;
-
   }
 
-  .leaflet-popup-content-wrapper {border-radius: 10px;}
-  .leaflet-popup-content-wrapper {padding: 0;}
-  .leaflet-popup-content {margin: 0;}
-  .leaflet-popup-content p {margin: 0;}
-  .leaflet-popup-content-wrapper, .leaflet-custom-popup {border-radius: 10px}
-  .leaflet-custom-popup {padding: 1em; }
+.leaflet-popup-content-wrapper {border-radius: 10px;}
+.leaflet-popup-content-wrapper {padding: 0;}
+.leaflet-popup-content {margin: 0;}
+.leaflet-popup-content p {margin: 0;}
+.leaflet-popup-content-wrapper, .leaflet-custom-popup {border-radius: 10px}
+.leaflet-custom-popup {padding: 1em; }
