@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Frontend</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Frontend</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="assets/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/component.css" />
+    <script src="assets/modernizr.custom.js"></script>
+    <script src="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js"></script>
+ 
+  </head>
+  <body>
 <%= yield %>
-
 </body>
 </html>
