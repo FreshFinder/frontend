@@ -10,30 +10,35 @@
  *
  *= require_self
  *= require_tree .
+ *= require map.css
  */
- 
-body { margin:0; padding:0; }
 
-#map { 
-  position:absolute;
-  top:0;
-  bottom:0; 
-  width:100%; 
-}
-
-.smaller{
-  font-size: 8px;
-  color: #000;
-}
+/*------------------ home page ----------------*/
+body { 
+  margin:0; 
+  padding:0; }
 
 .stacker {
   width: 20px;
   height: 20px;
   }
 
-.leaflet-popup-content-wrapper {border-radius: 10px;}
-.leaflet-popup-content-wrapper {padding: 0;}
-.leaflet-popup-content {margin: 0;}
-.leaflet-popup-content p {margin: 0;}
-.leaflet-popup-content-wrapper, .leaflet-custom-popup {border-radius: 10px}
-.leaflet-custom-popup {padding: 1em; }
+/*---------------  side bar ---------------------*/
+.smaller{
+  font-size: 8px;
+  color: #000;
+}
+.body.row { top: 75px; bottom: 50px; }
+.row, .col { overflow: hidden; position: absolute; }
+.row { left: 0; right: 0; }
+.col { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; }
+.scroll-y { overflow-y: auto; }
+
+
+.leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
+background: #962626;
+border-radius: 10px;
+box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+

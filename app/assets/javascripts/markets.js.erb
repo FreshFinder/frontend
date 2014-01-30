@@ -13,7 +13,7 @@ $.getJSON( marketData, function( data ) {
 
      var name = val.name;
      var id = val.id;
-     
+
      var markerLayer = L.mapbox.markerLayer({
         type: 'Feature',
         geometry: {
@@ -27,22 +27,32 @@ $.getJSON( marketData, function( data ) {
           street: val.address.street,
           city: val.address.city,
           name: val.name,
+          id: val.id,
           'marker-size': 'small',
           'marker-color': '#9CFF00'
         }
       }).addTo(mappy);
 
      markerLayer.eachLayer(function (layer) {
-      var content =  '<strong>'+ layer.feature.properties.name + '</strong>' + '</br>' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')';
+      console.log(layer);
+      var content =  '<strong>'+ layer.feature.properties.name +http://localhost:3000/# '</strong>' + '</br>' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')';
       layer.bindPopup(content, {
         closeButton: false });
+      layer.on('dragend', function(event){
+      var marker = event.target;
+      var position = marker.getLatLng();
+      alert(position);
+      marker.setLatLng([position],{id:uni,draggable:'true'}).bindPopup(position).update();
+      });
+      layer.on('click', function())
       });
     });
 
-    var list = $(".listings");
+    var list = $("#listings");
     $.each(data, function(index, val){
       console.log(val);
-        $(list).append('<li><a class="icon icon-data" href="#">' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
+      $
+        $(list).append('<li data-id=' + val.id + '><a class="icon icon-data" href="">' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
       });
    });
 });

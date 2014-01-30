@@ -45,14 +45,14 @@ a:hover, a:focus {
 }
 
 .codrops-header {
-	margin: 0 auto em;
-	/*padding-top: -1em;*/
+	margin-top: -2.1em;
+	padding: .5em 0px .5em ;
 	text-align: center;
 	background: url('opacity50.png');
 }
 
 .codrops-header h1 {
-	/*margin: -1em;*/
+	margin: -1em;
 	font-weight: 300;
 	font-size: 2.625em;
 	line-height: 1.4;
@@ -60,7 +60,7 @@ a:hover, a:focus {
 
 .codrops-header span {
 /*	display: block;*/
-/*	padding: 0 0 0.6em 0.1em;*/
+	padding: 0 0 0.6em 0.1em;
 	font-size: 60%;
 	color: #aca89a;
 
