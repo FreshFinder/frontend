@@ -1,0 +1,58 @@
+jQuery(document).ready(function() {
+
+var mappy = L.mapbox.map("map", "rsoden.map-wjcj2udt", { zoomControl: false }).setView([40.52086, -100.679523], 5); 
+new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
+
+var marketData = "<%= ENV['API_BASE_URL'] %>/api/v1/markets.json?address=true";
+
+$.getJSON( marketData, function( data ) {
+  $.each(data, function(index, val) {
+
+     var lng =  parseFloat(val.address.long),
+     lat =  parseFloat(val.address.lat);
+
+     var name = val.name;
+     var id = val.id;
+
+     var markerLayer = L.mapbox.markerLayer({
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [lng , lat]
+        },
+        properties: {
+          market_id: id,
+          name: name,
+          description: val.address.description,
+          street: val.address.street,
+          city: val.address.city,
+          name: val.name,
+          id: val.id,
+          'marker-size': 'small',
+          'marker-color': '#9CFF00'
+        }
+      }).addTo(mappy);
+
+     markerLayer.eachLayer(function (layer) {
+      console.log(layer);
+      var content =  '<strong>'+ layer.feature.properties.name +http://localhost:3000/# '</strong>' + '</br>' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')';
+      layer.bindPopup(content, {
+        closeButton: false });
+      layer.on('dragend', function(event){
+      var marker = event.target;
+      var position = marker.getLatLng();
+      alert(position);
+      marker.setLatLng([position],{id:uni,draggable:'true'}).bindPopup(position).update();
+      });
+      layer.on('click', function())
+      });
+    });
+
+    var list = $("#listings");
+    $.each(data, function(index, val){
+      console.log(val);
+      $
+        $(list).append('<li data-id=' + val.id + '><a class="icon icon-data" href="">' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
+      });
+   });
+});
