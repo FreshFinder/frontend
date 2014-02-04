@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require modernizer.custom
+//= require modernizr.custom
+//= require markets
 //= require classie
 //= require sidebarEffects
