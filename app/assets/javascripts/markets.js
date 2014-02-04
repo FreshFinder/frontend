@@ -2,10 +2,34 @@ jQuery(document).ready(function() {
 
 var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false })
 mappy.setView([40.52086, -100.679523], 4);
-mappy.addControl(L.mapbox.geocoderControl('pzula.h69mf89n', {
-        keepOpen: true, position: 'topright'
+
+mappy.addControl(L.mapbox.geocoderControl('pzula.h69mf89n', { position: 'topright'
     }));
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
+
+var geolocate = document.getElementById('geolocate');
+  geolocate.onclick = function(e) {
+     e.preventDefault();
+     e.stopPropagation();
+     mappy.locate();
+    };
+  }
+  mappy.on()
+     mappy.fitBounds(e.bounds);
+  
+  
+  // if (!navigator.geolocation) {
+  //   geolocate.innerHTML = 'geolocation is not available';
+  // } else {
+  //   geolocate.onclick = function (e) {
+  //       e.preventDefault();
+  //       e.stopPropagation();
+  //       map.locate();
+  //   };
+  // }
+  // mappy.on('locationfound', function(e) {
+  //   map.fitBounds(e.bounds);
+// 
 
 var marketData = "/api/v1/markets.json?address=true";
 
