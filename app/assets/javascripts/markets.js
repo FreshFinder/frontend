@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false })
 mappy.setView([40.52086, -100.679523], 4);
 mappy.addControl(L.mapbox.geocoderControl('pzula.h69mf89n', {
-        keepOpen: true, position: 'topright', margin: '10px',
+        keepOpen: true, position: 'topright'
     }));
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 

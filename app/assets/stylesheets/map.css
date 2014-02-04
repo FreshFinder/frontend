@@ -642,8 +642,8 @@
   border-color:rgba(0,0,0,0.4);
   border-bottom-width:0;
   overflow:hidden;
-  left:26px;
   height:27px;
+  left: -12em;
   width:0;
   top:-1px;
   border-radius:0 3px 3px 0;
@@ -680,7 +680,7 @@
 .leaflet-control-mapbox-geocoder-results {
   width:180px;
   position:absolute;
-  left:26px;
+  left:-12em;
   top:25px;
   border-radius:0 0 3px 3px;
   }
@@ -733,6 +733,25 @@
   margin:0;
   }
 }
+
+#geolocate {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 158px;
+    margin-left: -80px;
+    z-index: 1000;
+    font: 13px/18px;
+    text-align: center;
+    padding: 10px 0;
+    color: #3C4E5A;
+    display: block;
+    border: 1px solid #BBB;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
 
 /* Browser Fixes
 ------------------------------------------------------- */
