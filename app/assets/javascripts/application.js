@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require sidebarEffects.js
-//= require 'classie'
-//= require_tree .
-
+//= require modernizer.custom
+//= require classie
+//= require sidebarEffects
