@@ -43,10 +43,19 @@ $.getJSON( marketData, function( data ) {
 
     var list = $(".listings");
     $.each(data, function(index, val){
-        $(list).append('<li><a class="icon icon-data">' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
+        $(list).append('<li><a class="icon icon-data market-item" id=' + val.id + '>' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
+     });
+    });
 
+        $('.market-item').click(function(el){
+          console.log("boom" + 1);
+
+          $.getJSON( "/api/v1/markets/1", function( data ) {
+            $.each(data, function(index, val) {
+            });
+          });
         });
-      });
+
    });
 });
 
