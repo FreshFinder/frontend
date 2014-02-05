@@ -3,6 +3,8 @@ jQuery(document).ready(function() {
 var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 
+$("#modal").hide();
+
 var marketData = "/api/v1/markets.json?address=true";
 
 $.getJSON( marketData, function( data ) {
@@ -48,11 +50,11 @@ $.getJSON( marketData, function( data ) {
     });
 
         $('.market-item').click(function(el){
-          console.log("boom" + 1);
-
-          $.getJSON( "/api/v1/markets/1", function( data ) {
-            $.each(data, function(index, val) {
-            });
+          $.getJSON( "/api/v1/markets/1", function( market_data ) {
+            var html = '<div class="name">' + market_data[0].name + '</div>';
+            console.log(html);
+            $("#modal").html(html);
+            $("#modal").show();
           });
         });
 
