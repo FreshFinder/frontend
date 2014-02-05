@@ -1,4 +1,25 @@
+var App = {
+  Models: {},
+  Views: {},
+  Collections: {}
+};
+
+App.Models.Market = Backbone.Model.extend({
+});
+
+App.Collections.Markets = Backbone.Collection.extend({
+  model: App.Models.Market,
+  url: "api/v1/markets"
+});
+
+
 jQuery(document).ready(function() {
+
+  App.routes new....
+
+  App.markets = new App.Collections.Markets();
+  // App.current = new App.Views.Home({collection:App.markets});
+  App.markets.fetch( { succes: function() { go render stuff } } );
 
 var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);

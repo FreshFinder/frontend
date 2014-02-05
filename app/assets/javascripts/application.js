@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require modernizr.custom
+//= require vendor/underscore
+//= require vendor/backbone
 //= require markets
 //= require classie
 //= require sidebarEffects
