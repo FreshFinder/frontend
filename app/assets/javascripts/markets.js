@@ -45,14 +45,15 @@ $.getJSON( marketData, function( data ) {
 
     var list = $(".listings");
     $.each(data, function(index, val){
-        $(list).append('<li><a class="icon icon-data market-item" id=' + val.id + '>' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
+        $(list).append('<li><a class="icon icon-data market-item" data-market-id=' + val.id + '>' + val.name + '<p class="smaller">' + '<strong>' + val.address.street + '</strong>' + ', ' + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
      });
     });
 
         $('.market-item').click(function(el){
-          $.getJSON( "/api/v1/markets/1", function( market_data ) {
+          var marketId = $(this).data("market-id");
+          var url = "/api/v1/markets/" + marketId
+          $.getJSON( url, function( market_data ) {
             var html = '<div class="name">' + market_data[0].name + '</div>';
-            console.log(html);
             $("#modal").html(html);
             $("#modal").show();
           });
