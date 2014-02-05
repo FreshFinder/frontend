@@ -16,6 +16,11 @@
 //= require modernizr.custom
 //= require vendor/underscore
 //= require vendor/backbone
+//= require base
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
 //= require markets
 //= require classie
 //= require sidebarEffects
+
