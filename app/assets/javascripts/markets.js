@@ -5,7 +5,7 @@ new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 
 $("#modal").hide();
 
-var marketData = "http://localhost:5555/api/v1/markets.json?address=true";
+var marketData = "/api/v1/markets.json?address=true";
 
 $.getJSON( marketData, function( data ) {
   $.each(data, function(index, val) {
@@ -51,31 +51,15 @@ $.getJSON( marketData, function( data ) {
 
         $('.market-item').click(function(el){
           var marketId = $(this).data("market-id"),
-              url = "http://localhost:5555/api/v1/markets/" + marketId;
+              url = "/api/v1/markets/" + marketId;
 
           $.getJSON( url, function( market_data ) {
             $.each(market_data, function (i,val) {
-              var payment = [];
-              for( i = 0; i < market_data[0].payment_types.length; i++) {
-                payment.push(val.payment_types[i].name);
-              };
-
-              var products = []
-              for( i = 0; i < market_data[0].products.length; i++) {
-                products.push(val.products[i].name);
-                };
-          
-          debugger;
-          var html = '<h3 class="name">' + market_data[0].name + '</h3>' + 
-          '<p>' + payment.join(', ') + '</br>' + products + '</p>';
-          
-          $(".md-content").html(html);
-          $("#modal").show();
-            $(".modal-close").click(function (e){
-                $('#modal').hide();    
+              var payment = [],
+                  products = []
+              Modal.addModalListener(payment, products, market_data, val);
             });
           });
-        });
         });
       });
     });
