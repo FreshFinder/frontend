@@ -7,7 +7,6 @@ Modal.addModalListener = function(payment, products, market_data, val){
   for( i = 0; i < market_data[0].products.length; i++) {
     products.push(val.products[i].name);
   };
-  debugger;
   var html = '<h3 class="name">' + market_data[0].name + '</h3>' +
     '<p>' + payment.join(', ') + '</br>' + products + '</p>';
 
