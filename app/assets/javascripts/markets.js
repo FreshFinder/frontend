@@ -4,6 +4,9 @@ var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setVie
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 
 $("#modal").hide();
+$(".modal-close").click(function (e){
+  $('#modal').hide();
+  });
 
 var marketData = "/api/v1/markets.json?address=true";
 
