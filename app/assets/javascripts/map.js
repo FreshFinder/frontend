@@ -1,4 +1,5 @@
 var Map = {};
+
 Map.addMarkerToLayer = function(val) {
   var lng =  parseFloat(val.address.long),
       lat =  parseFloat(val.address.lat),
@@ -23,3 +24,8 @@ Map.addMarkerToLayer = function(val) {
       })
   return markerLayer;
 };
+
+Map.addPopupToLayer = function(layer) {
+  var content = '<div class="wheat"><img src="assets/wheat.png"/></div> <div class="main-info"><h4 class="namer"><strong>'+ layer.feature.properties.name + '</strong></h4>' + '<p class="addressy">' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')' + '</div>';
+  return content;
+}

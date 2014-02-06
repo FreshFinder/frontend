@@ -16,12 +16,12 @@ $.getJSON( marketData, function( data ) {
     var markerLayer = Map.addMarkerToLayer(val).addTo(mappy);
 
      markerLayer.eachLayer(function (layer) {
-      var content =  '<div class="wheat"><img src="assets/wheat.png"/></div> <div class="main-info"><h4 class="namer"><strong>'+ layer.feature.properties.name + '</strong></h4>' + '<p class="addressy">' + layer.feature.properties.street + ', ' + layer.feature.properties.city + '</br>' + '(' +layer.feature.properties.description + ')' + '</div>';
-      layer.bindPopup(content, {
-        closeButton: false });
-      layer.on('click', function(e) {
-        mappy.setView(e.latlng);
-      });
+       var content = Map.addPopupToLayer(layer);
+       layer.bindPopup(content, {
+         closeButton: false });
+       layer.on('click', function(e) {
+         mappy.setView(e.latlng);
+       });
     });
 
     var list = $(".listings");
