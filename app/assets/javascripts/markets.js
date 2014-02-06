@@ -68,8 +68,9 @@ $.getJSON( marketData, function( data ) {
                 products.push(val.products[i].name);
                 };
           
-          var html = '<h3 class="name">' + market_data[0].name + '</h3>' + 
-          '<p>' + payment.join(', ') + '</br>' + products + '</p>';
+          var html = '<h3 class="name">' + market_data[0].name + '</h3>' + '<hr><hr>' +
+          '<p><strong> Address: </strong>' + market_data[0].address.street + '</br>' +
+          '<strong>Payments Accepted: </strong>' + payment.join(', ') + '</br><strong>Products Sold: </strong>' + products.join(', ') + '</p>';
           
           $(".md-content").html(html);
           $("#modal").show();
