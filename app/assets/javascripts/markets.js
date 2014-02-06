@@ -4,6 +4,9 @@ var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setVie
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 
 $("#modal").hide();
+$(".modal-close").click(function (e){
+  $('#modal').hide();
+  });
 
 var marketData = "http://localhost:5555/api/v1/markets.json?address=true";
 
@@ -65,15 +68,12 @@ $.getJSON( marketData, function( data ) {
                 products.push(val.products[i].name);
                 };
           
-          debugger;
           var html = '<h3 class="name">' + market_data[0].name + '</h3>' + 
           '<p>' + payment.join(', ') + '</br>' + products + '</p>';
           
           $(".md-content").html(html);
           $("#modal").show();
-            $(".modal-close").click(function (e){
-                $('#modal').hide();    
-            });
+            
           });
         });
         });
