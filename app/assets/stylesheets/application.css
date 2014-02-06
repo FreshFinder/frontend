@@ -44,3 +44,87 @@ border-radius: 10px;
 box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
+/*---------------------- modal ------------------------*/
+#modal {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  padding: 20px;
+  height: 100%;
+  background: url(opacitydark.png);
+  border: 1px solid #333; 
+}
+
+.md-content {
+  margin-right: 30%;
+  color: #fff;
+  background: #2c774b;
+  right: 300px;
+  left-padding: 300px;
+  z-index: 100;
+  border-radius: 3px;
+}
+
+.modal-close button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  z-index: 101;
+}
+
+.md-content h3 {
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 300;
+  opacity: 0.8;
+ /* background: rgba(0,0,0,0.1);*/
+  border-radius: 3px 3px 0 0;
+}
+
+.md-content .address{
+  margin: 0;
+  padding: 0.4em;
+  padding-left: -2em;
+  text-align: center;
+  font-size: 1em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px 3px 0 0;
+}
+
+.md-content div.payments {
+  margin: 0;
+  padding: 0.4em;
+  padding-right: 2em;
+  text-align: left;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px 3px 0 0;
+}
+
+.md-content div.products {
+  margin: 0;
+  padding: 0.4em;
+  padding-right: 2em;
+  text-align: left;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px 3px 0 0;
+}
+
+.md-content img{
+  height: 1.2em;
+  width: 1.2em;
+  padding: 10px auto;
+}
+

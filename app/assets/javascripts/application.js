@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require modernizr.custom
+//= require map
+//= require modal
 //= require markets
 //= require classie
 //= require sidebarEffects
