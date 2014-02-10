@@ -15,6 +15,15 @@ jQuery(document).ready(function() {
         $(list).append('<li><a class="icon icon-data market-item" data-market-id=' + market.id + '>' + market.name + '<p class="smaller"> </p>' + '</a></li>');
       });
     });
+    Search.addCloseListeners();
+  };
+
+  Search.addCloseListeners = function() {
+    var container = $('.st-container');
+    $(".st-pusher").click(function (e) {
+      console.log("boom from the closed burger")
+      container.removeClass('st-menu-open');
+    });
   };
 
   $("#search-button").click(function (e) {
