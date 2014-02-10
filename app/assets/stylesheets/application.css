@@ -52,7 +52,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
   padding: 20px;
   height: 100%;
   background: url(opacitydark.png);
-  border: 1px solid #333; 
+  border: 1px solid #333;
 }
 
 .md-content {
@@ -65,11 +65,17 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
   border-radius: 3px;
 }
 
-.modal-close button {
+button.modal-close  {
   display: block;
   margin: 0 auto;
   font-size: 1em;
   z-index: 101;
+  background: #fff;
+  padding:1em;
+  position: absolute;
+  top: 10px;
+  line-height:0.25em;
+  right: 420px;
 }
 
 .md-content h3 {
