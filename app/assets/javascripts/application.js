@@ -19,3 +19,4 @@
 //= require markets
 //= require classie
 //= require sidebarEffects
+//= require marketSearch
