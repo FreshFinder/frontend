@@ -20,7 +20,13 @@
           <div id="st-trigger-effects">
             <button data-effect="st-effect-2"><%= image_tag "menu.svg", class: 'stacker' %></button>
           </div>
-          <h1 class="codrops-header">FreshFinder <span>Find the farmer's markets near you... </span></h1>
+          <h1 class="codrops-header">
+            <div id="search-box">
+              <input id="search-input" type="text" placeholder="enter a zipcode..."></input>
+              <input type="submit" value="Search">
+            </div>
+            FreshFinder <span>Find the farmer's markets near you... </span>
+          </h1>
         </header>
         <div class="main clearfix">
 
