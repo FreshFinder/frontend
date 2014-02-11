@@ -1,13 +1,30 @@
 <%=  render partial: "header" %>
 
-<%= @market.name %>
-<%= @market.address.street %>
-<%= @market.address.city %>
-<%= @market.address.state %>
-<%= @market.address.zipcode %>
+<div id="show_page_container">
+
+  <div id="image_container">
+    <div id="market_image"><img src="http://www.bayoucityoutdoors.com/clubportal/images/clubimages/3/Kristina/farmers-market-produce.jpg" alt="market image" width="600" height="450">
+    </div>
+  </div>
+  <div class= "market_header">
+    <h1><%= @market.name %></h1>
+  </div>
+  <div class= "market_info">
+    <ul>
+      <li><%= @market.address.street %> </li>
+      <li><%= @market.address.city %>, <%=  @market.address.state %></li>
+      <li><%= @market.address.zipcode %></li>
+      <li><%= @market.address.description %></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
 <%= @market.address.lat %>
 <%= @market.address.lng %>
-<%= @market.address.description %>
+
 <%= @market.season1.season_number %>
 <%= @market.season1.start_month %>
 <%= @market.season1.end_month %>

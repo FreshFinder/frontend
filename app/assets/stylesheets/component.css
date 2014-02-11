@@ -13,6 +13,23 @@ body,
 	height: 100%;
 }
 
+/*lauren's changes*/
+#show_page_container {
+	padding-left: 45px;
+	padding-right: 45px;
+	width: 100%;
+}
+
+#image_container {
+	float:right;
+}
+
+.market_image {
+	width: 600px;
+}
+
+/*end lauren's changes*/
+
 .st-content {
 	overflow-y: scroll;
 	background: #f3efe0;
