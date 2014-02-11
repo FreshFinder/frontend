@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 20:40:11 GMT
+      - Tue, 11 Feb 2014 21:04:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -49,12 +49,12 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 63972824-a757-4adc-bd01-c9ccded36248
+      - 551d3e2e-2b1c-4629-b7f0-f1cc7c6c8fc8
       X-Runtime:
-      - '0.006818'
+      - '0.005991'
     body:
       encoding: UTF-8
       string: '{"errors":{"market_id":["can''t be blank"]}}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 20:40:11 GMT
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
 recorded_with: VCR 2.8.0

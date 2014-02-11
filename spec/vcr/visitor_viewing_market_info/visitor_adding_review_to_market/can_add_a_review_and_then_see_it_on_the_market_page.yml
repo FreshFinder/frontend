@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 20:40:10 GMT
+      - Tue, 11 Feb 2014 21:04:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -49,40 +49,38 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8215ad25-3c85-4549-b93e-085441216e53
+      - 81723e2e-b8a0-4344-b6bf-e7f0fcf2ff98
       X-Runtime:
-      - '0.024314'
+      - '0.019269'
     body:
       encoding: UTF-8
       string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
         Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
         Goods"],"payment_types":["credit"]}}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 20:40:10 GMT
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
 - request:
-    method: post
-    uri: http://localhost:8080/api/v1/reviews
+    method: get
+    uri: http://localhost:8080/api/v1/reviews/1.json
     body:
-      encoding: UTF-8
-      string: review%5Bcontent%5D=&review%5Bemail%5D=&review%5Bmarket_id%5D=1&review%5Bname%5D=&review%5Btitle%5D=
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v0.9.0
-      Content-Type:
-      - application/x-www-form-urlencoded
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - '*/*'
   response:
     status:
-      code: 201
-      message: Created
+      code: 200
+      message: OK
     headers:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 20:40:10 GMT
+      - Tue, 11 Feb 2014 21:04:10 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -106,16 +104,199 @@ http_interactions:
       Access-Control-Max-Age:
       - '1728000'
       Etag:
-      - '"62fcb17b825364f822921029cd01b83f"'
+      - '"0a077435b6e405ca5f14fc13d2735185"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a4bf602-4f14-499c-aa28-e59cd12a1579
+      - dca093a3-632c-4006-8075-0f97fc62b896
       X-Runtime:
-      - '0.006423'
+      - '0.005295'
     body:
       encoding: UTF-8
-      string: '{"id":21,"market_id":1,"name":"","email":"","title":"","content":"","created_at":"2014-02-11T20:40:10.972Z","updated_at":"2014-02-11T20:40:10.972Z"}'
+      string: '[{"name":"Jane","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"Jody","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"Persa","email":"pokemon@email.com","title":"Good
+        review","content":"Hey hey"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"}]'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 20:40:10 GMT
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/reviews
+    body:
+      encoding: UTF-8
+      string: review%5Bcontent%5D=&review%5Bemail%5D=&review%5Bmarket_id%5D=1&review%5Bname%5D=&review%5Btitle%5D=
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:04:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"abf195657b89a1dbd50a8c284a32255e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 71be3e55-a381-4d76-a79d-0ecd657d4610
+      X-Runtime:
+      - '0.006743'
+    body:
+      encoding: UTF-8
+      string: '{"id":8,"market_id":1,"name":"","email":"","title":"","content":"","created_at":"2014-02-11T21:04:10.896Z","updated_at":"2014-02-11T21:04:10.896Z"}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/markets/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:04:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"f47edccc8fe5456564373a0edc1d0716"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8ba7d062-17da-4b9d-b3cc-7296552af4de
+      X-Runtime:
+      - '0.022296'
+    body:
+      encoding: UTF-8
+      string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
+        Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
+        Goods"],"payment_types":["credit"]}}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/reviews/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:04:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"30357f586ecd69d9e8f63448f3d15bfe"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 086da774-f319-4acc-8964-7e08923fb4d0
+      X-Runtime:
+      - '0.006441'
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Jane","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"Jody","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"Persa","email":"pokemon@email.com","title":"Good
+        review","content":"Hey hey"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""}]'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
 recorded_with: VCR 2.8.0

@@ -3,7 +3,6 @@ class ReviewFetcher
   def self.create(review)
     review_params = review.as_json
     response = connection.post '/api/v1/reviews', { :review => review_params }
-    parsed_response = JSON.parse(response.body)
     response_code = response.status
     return [review, response_code]
   end
@@ -19,6 +18,12 @@ class ReviewFetcher
       faraday.response :logger
       faraday.adapter  Faraday.default_adapter
     end
+  end
+
+  def self.find(market_id)
+    response = connection.get "/api/v1/reviews/#{market_id}.json"
+    body = JSON.parse(response.body)
+    body.map {|review| Review.new(review)}
   end
 
 end
