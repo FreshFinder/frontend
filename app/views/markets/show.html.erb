@@ -1,0 +1,68 @@
+
+<%= @market.name %>
+<%= @market.address.street %>
+<%= @market.address.city %>
+<%= @market.address.state %>
+<%= @market.address.zipcode %>
+<%= @market.address.lat %>
+<%= @market.address.lng %>
+<%= @market.address.description %>
+<%= @market.season1.season_number %>
+<%= @market.season1.start_month %>
+<%= @market.season1.end_month %>
+<% @market.season1.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season2.season_number %>
+<%= @market.season2.start_month %>
+<%= @market.season2.end_month %>
+<% @market.season2.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season3.season_number %>
+<%= @market.season3.start_month %>
+<%= @market.season3.end_month %>
+<% @market.season3.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season4.season_number %>
+<%= @market.season4.start_month %>
+<%= @market.season4.end_month %>
+<% @market.season4.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+
+<%= @market.products %>
+<%= @market.payment_types %>
+
+
+<!-- THIS IS THE FORM AREA -->
+<%= form_tag "/api/v1/reviews" do %>
+  <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
+
+  <%= label_tag "name" %>
+    <%= text_field_tag "review[name]" %>
+
+  <%= label_tag "email" %>
+    <%= text_field_tag "review[email]" %>
+
+  <%= label_tag "title" %>
+    <%= text_field_tag "review[title]" %>
+
+  <%= label_tag "content", "Your Review" %>
+  <%= text_field_tag "review[content]" %>
+  <%= submit_tag "Write your review!" %>
+<% end %>
+
+
+<!-- these are the reviews -->
+
+
