@@ -1,52 +1,76 @@
+<div class="show-page">
+  <h3 class="name"><%= @market.name %></h3>
+  <hr><hr>
 
-<%= @market.name %>
-<%= @market.address.street %>
-<%= @market.address.city %>
-<%= @market.address.state %>
-<%= @market.address.zipcode %>
-<%= @market.address.lat %>
-<%= @market.address.lng %>
-<%= @market.address.description %>
-<%= @market.season1.season_number %>
-<%= @market.season1.start_month %>
-<%= @market.season1.end_month %>
-<% @market.season1.schedules.each do |schedule| %>
-  <%= schedule.day %>
-  <%= schedule.start_time %>
-  <%= schedule.end_time %>
-<% end %>
-<%= @market.season2.season_number %>
-<%= @market.season2.start_month %>
-<%= @market.season2.end_month %>
-<% @market.season2.schedules.each do |schedule| %>
-  <%= schedule.day %>
-  <%= schedule.start_time %>
-  <%= schedule.end_time %>
-<% end %>
-<%= @market.season3.season_number %>
-<%= @market.season3.start_month %>
-<%= @market.season3.end_month %>
-<% @market.season3.schedules.each do |schedule| %>
-  <%= schedule.day %>
-  <%= schedule.start_time %>
-  <%= schedule.end_time %>
-<% end %>
-<%= @market.season4.season_number %>
-<%= @market.season4.start_month %>
-<%= @market.season4.end_month %>
-<% @market.season4.schedules.each do |schedule| %>
-  <%= schedule.day %>
-  <%= schedule.start_time %>
-  <%= schedule.end_time %>
-<% end %>
+  <div id="show-content">
+    <div class="address">
+      <%= @market.address.street %>
+      <%= @market.address.city %>, <%= @market.address.state %>
+      <%= @market.address.zipcode %>
+    </div>
 
-<%= @market.products %>
-<%= @market.payment_types %>
+    <div id="directions">
+        <div id="map">
+        <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,12/750x300.png"></div>
+        <strong>Directions:</strong>  <%= @market.address.description %>
+    </div>
 
+    <div class="show-column">
+      <div class="time">
+        <% @market.season1.schedules.each do |schedule| %>
+          <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+        <% end %>
+        <% @market.season2.schedules.each do |schedule| %>
+               <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+        <% end %>
+        <% @market.season4.schedules.each do |schedule| %>
+              <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+         <% end %>
+        <% @market.season3.schedules.each do |schedule| %>
+              <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+        <% end %>
+      </div>
+
+      <div class="season">
+        <strong>Season:</strong>
+        <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
+        <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
+        <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
+        <%= @market.season4.start_month %> <%= @market.season4.end_month %>
+      </div>
+    </div>
+
+   <div class="show-column">
+      <div class="products">
+        <strong>Products: </strong><%= @market.products.join(", ") %>
+      </div>
+
+      <div class="payments">
+        <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
+      </div>
+   </div>
+
+    <button id="review"> Review this Market </button>
+  </div>
+</div>
+<hr>
+<hr>
+
+<!-- Review form  -->
+<form class="cbp-mc-form">
+    <fieldset class='review form'>
+      <legend> Please Review This Market </legend>
+      <div class="cbp-mc-column">
+      <%= form_tag "/api/v1/reviews" do %>
+        <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
+        <%= label_tag "name" %>
+          <%= text_field_tag "review[name]" %><br/>
+        <%= label_tag "email" %>
+          <%= text_field_tag "review[email]" %><br/>
+        <%= label_tag "title" %>
+          <%= text_field_tag "review[title]" %><br/>
 
 <!-- THIS IS THE FORM AREA -->
-
-
 <%= form_tag "/markets/#{@market_id}/reviews" do %>
   <%= hidden_field_tag "market_id", "#{@market_id}" %>
 
@@ -60,11 +84,27 @@
     <%= text_field_tag "title" %>
 
   <%= label_tag "content", "Your Review" %>
-  <%= text_field_tag "content" %>
+  <%= text_field_tag "review[content]" %>
+  <br>
   <%= submit_tag "Write your review!" %>
 <% end %>
+    </div>
+  </fieldset>
+</form>
+ 
+ <div class="reviews-summary">
+  <div class="market-reviews">
+    <h2>Reviews from this market:<h2>
+  </div>
+</div>
 
+<script>
+ $('.cbp-mc-form').hide();
+  $("button#review").click(function (e){
+    $('.cbp-mc-form').show();
+  });
+</script>
 
-<!-- these are the reviews -->
+<!-- Reviews -->
 
 <%= render partial:"reviews/review", collection: @reviews %>
