@@ -45,9 +45,6 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
 /*---------------------- show ------------------------*/
-.show-page {
-  background: url(opacity10.png);
-}
 
 .show-page div#map img{
   width: 300px;
@@ -86,6 +83,18 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
   text-transform: capitalize;
   font-weight: 300;
   opacity: 0.8;
+}
+
+.show-page div.time, div.season {
+  margin: 0;
+  padding: 0.4em;
+  padding-right: 2em;
+  text-align: left;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  border-radius: 3px 3px 0 0;
 }
 
 .show-page div.payments {

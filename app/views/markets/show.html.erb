@@ -1,6 +1,8 @@
 <div class="show-page">
   <h3 class="name"><%= @market.name %></h3>
-  <hr>
+  <hr><hr>
+
+  <div class="show-content">
     <p><div class="address">
       <%= @market.address.street %>
       <%= @market.address.city %>, <%= @market.address.state %>
@@ -18,39 +20,24 @@
 
     <div class="time">
       <% @market.season1.schedules.each do |schedule| %>
-        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> to
-        <%= schedule.end_time %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
       <% end %>
       <% @market.season2.schedules.each do |schedule| %>
-        <%= schedule.day %>
-        <%= schedule.start_time %>
-        <%= schedule.end_time %>
+         <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+      <% end %>
+      <% @market.season4.schedules.each do |schedule| %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+       <% end %>
+      <% @market.season3.schedules.each do |schedule| %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
       <% end %>
     </div>
 
     <div class="season">
-      <%= @market.season1.start_month %>
-      <%= @market.season1.end_month %>
-    
-      <%= @market.season2.start_month %>
-      <%= @market.season2.end_month %>
-
-      
-      <%= @market.season3.season_number %>
-      <%= @market.season3.start_month %>
-      <%= @market.season3.end_month %>
-      <% @market.season3.schedules.each do |schedule| %>
-        <%= schedule.day %>
-        <%= schedule.start_time %>
-        <%= schedule.end_time %>
-      <% end %>
-      <%= @market.season4.season_number %>
-      <%= @market.season4.start_month %>
-      <%= @market.season4.end_month %>
-      <% @market.season4.schedules.each do |schedule| %>
-        <%= schedule.day %>
-        <%= schedule.start_time %>
-        <%= schedule.end_time %>
-      <% end %>
+      <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
+      <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
+      <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
+      <%= @market.season4.start_month %> <%= @market.season4.end_month %>
     </div>
+  </div>
 </div>
