@@ -70,12 +70,24 @@
         <%= label_tag "title" %>
           <%= text_field_tag "review[title]" %><br/>
 
-        <%= label_tag "content", "Your Review" %>
-        <%= text_field_tag "review[content]" %>
-        <br>
-        <%= submit_tag "Write your review!" %>
+<!-- THIS IS THE FORM AREA -->
+<%= form_tag "/markets/#{@market_id}/reviews" do %>
+  <%= hidden_field_tag "market_id", "#{@market_id}" %>
 
-      <% end %>
+  <%= label_tag "name" %>
+    <%= text_field_tag "name" %>
+
+  <%= label_tag "email" %>
+    <%= text_field_tag "email" %>
+
+  <%= label_tag "title" %>
+    <%= text_field_tag "title" %>
+
+  <%= label_tag "content", "Your Review" %>
+  <%= text_field_tag "review[content]" %>
+  <br>
+  <%= submit_tag "Write your review!" %>
+<% end %>
     </div>
   </fieldset>
 </form>
@@ -83,7 +95,6 @@
  <div class="reviews-summary">
   <div class="market-reviews">
     <h2>Reviews from this market:<h2>
-
   </div>
 </div>
 
@@ -96,3 +107,4 @@
 
 <!-- Reviews -->
 
+<%= render partial:"reviews/review", collection: @reviews %>
