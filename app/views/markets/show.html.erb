@@ -65,46 +65,33 @@
     <button id="close-form"> x </button>
     <h4> Share what you know about this market! </h4>
     <div class="cbp-mc-column">
-    <%= form_tag "/api/v1/reviews" do %>
-      <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
-      <%= label_tag "name" %>
-        <%= text_field_tag "review[name]" %><br/>
-      <%= label_tag "email" %>
-        <%= text_field_tag "review[email]" %><br/>
-      <%= label_tag "title" %>
-        <%= text_field_tag "review[title]" %><br/>
-      <%= label_tag "content", "Your Review" %>
-      <%= text_field_tag "review[content]" %>
-      <br>
-      <%= submit_tag "Write your review!" %>
-    <% end %>
 
-<!-- THIS IS THE FORM AREA -->
-<%= form_tag "/markets/#{@market_id}/reviews" do %>
-  <%= hidden_field_tag "market_id", "#{@market_id}" %>
+      <%= form_tag "/markets/#{@market_id}/reviews" do %>
+        <%= hidden_field_tag "market_id", "#{@market_id}" %>
 
-  <%= label_tag "name" %>
-    <%= text_field_tag "name" %>
+        <%= label_tag "name" %>
+          <%= text_field_tag "name" %>
 
-  <%= label_tag "email" %>
-    <%= text_field_tag "email" %>
+        <%= label_tag "email" %>
+          <%= text_field_tag "email" %>
 
-  <%= label_tag "title" %>
-    <%= text_field_tag "title" %>
+        <%= label_tag "title" %>
+          <%= text_field_tag "title" %>
 
-  <%= label_tag "content", "Your Review" %>
-  <%= text_field_tag "review[content]" %>
-  <br>
-  <%= submit_tag "Write your review!" %>
-<% end %>
+        <%= label_tag "content", "Your Review" %>
+        <%= text_field_tag "content" %>
+        <br>
+        <%= submit_tag "Write your review!" %>
+      <% end %>
 
     </div>
   </div>
 </form>
- 
+
  <div class="reviews-summary">
   <div class="market-reviews">
     <h2>Reviews from this market:<h2>
+    <%= render partial:"reviews/review", collection: @reviews %>
   </div>
 </div>
 </div>
@@ -119,7 +106,3 @@
     $('.cbp-mc-form').hide();
   });
 </script>
-
-<!-- Reviews -->
-
-<%= render partial:"reviews/review", collection: @reviews %>
