@@ -44,30 +44,169 @@ border-radius: 10px;
 box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
-/*---------------------- modal ------------------------*/
-#modal {
-  position: absolute;
-  width: 100%;
-  z-index: 100;
-  padding: 20px;
+/*---------------------- show ------------------------*/
+div.show-page {
+  background-image: url(farming.jpg);
+  z-index: 1;
+/*  height: 45em;*/
+  }
+
+div#show-content {
+  background: #404040;
+  width: 750px;
+  margin: 0 auto;
+  z-index: 999;
   height: 100%;
+}
+
+.show-column {
+  -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  width: 300 px;
+}
+
+.show-page div#map img{
+  position: relative;
+  width: 750px;
+  height: 300px;
+  padding: 10px auto;
+}
+
+.show-page #directions {
+  width: 750px;
+  margin: 0;
+  font-size: 1em;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 300;
   background: url(opacitydark.png);
-  border: 1px solid #333;
 }
 
-.md-content {
-  margin-right: 30%;
-  color: #fff;
-  background: #2c774b;
-  right: 300px;
-  left-padding: 300px;
-  z-index: 100;
-  border-radius: 3px;
+.show-page h3 {
+  margin: 0 3% 0 3%;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 300;
+  border-radius: 3px 3px 0 0;
 }
 
-button.modal-close  {
+.show-page .address{
+  margin: 0;
+  padding: 0.2em;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.show-page div.time, 
+.show-page div.season, 
+.show-page div.payments, 
+.show-page div.products {
+  text-align: left;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: 300;
+  padding: 5px;
+  margin: 0;
+}
+
+.market-reviews h2 {
+  margin: 0 25% 0 25%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  background: url(opacitydark.png);
+}
+
+div.reviews-summary {
+  background: url(farming.jpg);
+  height: 30em;
+}
+/*=--------------- review form -------------------*/
+.cbp-mc-form {
+  width: 750px;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+.review-form {
+  width: 750px;
+}
+
+fieldset.review-form {
+  width: 750px;
+  margin: 0;
+  padding: 0.4em;
+  padding-right: 2em;
+  text-align: left;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  border-radius: 3px 3px 0 0;
+}
+
+.cbp-mc-form label {
+    display: block;
+    padding: 40px 5px 5px 2px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+ 
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.4em;
+    padding: 5px 10px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    background: transparent;
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea {
+    border: 3px solid #fff;
+}
+ 
+.cbp-mc-form input:focus,
+.cbp-mc-form textarea:focus,
+.cbp-mc-form label:active + input,
+.cbp-mc-form label:active + textarea {
+    outline: none;
+    border: 3px solid #10689a;
+}
+ 
+.cbp-mc-form select:focus {
+    outline: none;
+}
+
+ .cbp-mc-form input.submit {
+    background: #10689a;
+    border: none;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+button.show-page  {
   display: block;
   margin: 0 auto;
+  width: 100%;
   font-size: 1em;
   z-index: 101;
   background: #fff;
@@ -77,60 +216,3 @@ button.modal-close  {
   line-height:0.25em;
   right: 420px;
 }
-
-.md-content h3 {
-  margin: 0;
-  padding: 0.4em;
-  text-align: center;
-  font-size: 2.4em;
-  font-weight: 300;
-  opacity: 0.8;
- /* background: rgba(0,0,0,0.1);*/
-  border-radius: 3px 3px 0 0;
-}
-
-.md-content .address{
-  margin: 0;
-  padding: 0.4em;
-  padding-left: -2em;
-  text-align: center;
-  font-size: 1em;
-  text-transform: capitalize;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0,0,0,0.1);
-  border-radius: 3px 3px 0 0;
-}
-
-.md-content div.payments {
-  margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
-  text-align: left;
-  font-size: 2em;
-  text-transform: capitalize;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0,0,0,0.1);
-  border-radius: 3px 3px 0 0;
-}
-
-.md-content div.products {
-  margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
-  text-align: left;
-  font-size: 2em;
-  text-transform: capitalize;
-  font-weight: 300;
-  opacity: 0.8;
-  background: rgba(0,0,0,0.1);
-  border-radius: 3px 3px 0 0;
-}
-
-.md-content img{
-  height: 1.2em;
-  width: 1.2em;
-  padding: 10px auto;
-}
-

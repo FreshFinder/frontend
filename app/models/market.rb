@@ -17,5 +17,4 @@ class Market
       PaymentType.new(type)
     end
   end
-
 end

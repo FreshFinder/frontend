@@ -4,7 +4,7 @@ class MarketFetcher
     if Rails.env.production?
       uri = "http://freshfinder.us"
     else
-      uri = "http://localhost:8080"
+      uri = "http://localhost:5555"
     end
     Faraday.new("#{uri}/api/v1/markets") do |faraday|
       faraday.request  :url_encoded

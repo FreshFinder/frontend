@@ -6,8 +6,6 @@ describe 'visitor viewing market info' do
     expect(page).to have_text("Y Not Wednesday Farmers Market at Town Center")
     expect(page).to have_text("201 Market Street")
     expect(page).to have_text("Virginia")
-    expect(page).to have_text("-76.135361")
-    expect(page).to have_text("36.841885")
     expect(page).to have_text("June")
     expect(page).to have_text("August")
     expect(page).to have_text("17:00:00")
