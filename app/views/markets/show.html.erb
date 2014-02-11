@@ -61,26 +61,26 @@
 
 <!-- Review form  -->
 <form class="cbp-mc-form">
-    <fieldset class='review form'>
-      <legend> Share what you know about this market! </legend>
-      <div class="cbp-mc-column">
-      <%= form_tag "/api/v1/reviews" do %>
-        <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
-        <%= label_tag "name" %>
-          <%= text_field_tag "review[name]" %><br/>
-        <%= label_tag "email" %>
-          <%= text_field_tag "review[email]" %><br/>
-        <%= label_tag "title" %>
-          <%= text_field_tag "review[title]" %><br/>
+  <div class='review-form'>
+    <button id="close-form"> x </button>
+    <h4> Share what you know about this market! </h4>
+    <div class="cbp-mc-column">
+    <%= form_tag "/api/v1/reviews" do %>
+      <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
+      <%= label_tag "name" %>
+        <%= text_field_tag "review[name]" %><br/>
+      <%= label_tag "email" %>
+        <%= text_field_tag "review[email]" %><br/>
+      <%= label_tag "title" %>
+        <%= text_field_tag "review[title]" %><br/>
 
-        <%= label_tag "content", "Your Review" %>
-        <%= text_field_tag "review[content]" %>
-        <br>
-        <%= submit_tag "Write your review!" %>
-
-      <% end %>
+      <%= label_tag "content", "Your Review" %>
+      <%= text_field_tag "review[content]" %>
+      <br>
+      <%= submit_tag "Write your review!" %>
+    <% end %>
     </div>
-  </fieldset>
+  </div>
 </form>
  
  <div class="reviews-summary">
@@ -96,6 +96,9 @@
  $('.cbp-mc-form').hide();
   $("button#review").click(function (e){
     $('.cbp-mc-form').show();
+  });
+  $("button#close-form").click(function (e){
+    $('.cbp-mc-form').hide();
   });
 </script>
 

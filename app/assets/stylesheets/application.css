@@ -52,13 +52,9 @@ div.show-page {
   background-size:cover;
 }
 
-/*.name {
-  background-image :url(opacitydark.png);
-}  */
-
 header.show-page-header {
   text-align: center;
-  background-image: url('opacitydark.png');
+  background-image: url(opacitydark.png);
   padding-top: 3em;
 }
 
@@ -70,7 +66,6 @@ header.show-page-header {
 }
 
 .show-page-header span {
-/*  display: block;*/
   padding: 0 0 0.6em 0.1em;
   font-size: 60%;
   color: #aca89a;
@@ -148,7 +143,7 @@ div#show-content {
 }
 
 .market-reviews h2 {
-  margin: 0 25% 0 25%;
+  margin: 3% 25% 0 25%;
   text-align: center;
   font-size: 2em;
   font-weight: 300;
@@ -164,51 +159,63 @@ div.reviews-summary {
   width: 750px;
   margin: 0 auto;
   position: relative;
-
 }
 
-.review-form {
-  width: 750px;
-}
-
-fieldset.review-form {
-  width: 750px;
+div.review-form {
+  background: url(opacitydark.png); 
   margin: 0;
   padding: 0.4em;
   padding-right: 2em;
   text-align: left;
-  font-size: 2em;
+  font-size: 1.5em;
   text-transform: capitalize;
   font-weight: 300;
-  opacity: 0.8;
   border-radius: 3px 3px 0 0;
 }
 
+.review-form h4 {
+  text-align: center;
+  }
+
+button#close-form {
+  float: right;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+}  
+
+.cbp-mc-column {
+  padding: 10px;
+}
+
 .cbp-mc-form label {
-    display: block;
-    padding: 40px 5px 5px 2px;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
+  display: block;
+  padding: 40px 5px 5px 2px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
  
 .cbp-mc-form input,
 .cbp-mc-form textarea,
 .cbp-mc-form select {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    line-height: 1.5;
-    font-size: 1.4em;
-    padding: 5px 10px;
-    color: #fff;
-    display: block;
-    width: 100%;
-    background: transparent;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1.4em;
+  padding: 5px 10px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  background: transparent;
 }
 
 .cbp-mc-form input,
 .cbp-mc-form textarea {
-    border: 3px solid #fff;
+  border: 3px solid #fff;
 }
  
 .cbp-mc-form input:focus,
