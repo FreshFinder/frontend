@@ -3,6 +3,7 @@ class MarketsController < ApplicationController
   end
 
   def show
+    @market_id = params[:id]
     @market = MarketFetcher.find(params[:id])
   end
 end
