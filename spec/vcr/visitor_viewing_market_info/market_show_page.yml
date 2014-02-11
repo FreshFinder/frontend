@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 22:33:53 GMT
+      - Tue, 11 Feb 2014 22:42:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -49,16 +49,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 05e853aa-0646-4861-8934-4476767d9e59
+      - 9f7686ee-f8d7-4ed7-b88e-f61453f4961d
       X-Runtime:
-      - '0.051064'
+      - '0.046547'
     body:
       encoding: UTF-8
       string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
         Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
         Goods"],"payment_types":["credit"]}}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 22:33:53 GMT
+  recorded_at: Tue, 11 Feb 2014 22:42:48 GMT
 - request:
     method: get
     uri: http://localhost:8080/api/v1/reviews/1.json
@@ -80,7 +80,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 22:33:53 GMT
+      - Tue, 11 Feb 2014 22:42:48 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -104,13 +104,13 @@ http_interactions:
       Access-Control-Max-Age:
       - '1728000'
       Etag:
-      - '"d4bcc7ef982052ab0283520014b1c4c7"'
+      - '"57a45d8af0704b3b0a5db168286c64e3"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b486257b-41aa-4aff-bf8b-f1fd4394727b
+      - 327bf620-53b0-4fd2-bb40-6e4325ed1ce8
       X-Runtime:
-      - '0.008626'
+      - '0.010965'
     body:
       encoding: UTF-8
       string: '[{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
@@ -127,7 +127,10 @@ http_interactions:
         market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
         market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
         market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"},{"name":"Massimo","email":"babyhappening@example.com","title":"Great
+        samosas!","content":"all the kiwi you could ever want."},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"},{"name":"Lauren","email":"example@example.com","title":"Great
         market","content":"All the pineapples"}]'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 22:33:53 GMT
+  recorded_at: Tue, 11 Feb 2014 22:42:48 GMT
 recorded_with: VCR 2.8.0
