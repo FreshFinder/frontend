@@ -56,9 +56,17 @@ div.show-page {
   background-image :url(opacitydark.png);
 }  */
 
+#page-container {
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 750px;
+}
+
 div#show-content {
   background: url(opacitydark.png);
   width: 750px;
+  /*border: 25px;*/
   margin: 0 auto;
   z-index: 999;
   height: 100%;
@@ -127,7 +135,7 @@ div#show-content {
 }
 
 div.reviews-summary {
-  background: url(farming.jpg);
+  /*background: url(farming.jpg);*/
   height: 30em;
 }
 /*=--------------- review form -------------------*/
