@@ -45,18 +45,25 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
 /*---------------------- show ------------------------*/
-.show-content{
+div.show-page {
+  background-image: url(farming.jpg);
+  z-index: 1;
+  height: 45em;
+  }
+
+div#show-content {
+  background: #404040;
   width: 750px;
- /* height: 100%;
-*/  margin: 0 auto;
-  background: url(opacity10.png);
+  margin: 0 auto;
+  z-index: 999;
+  height: 100%;
 }
 
 .show-column {
--moz-column-count:2; 
--webkit-column-count:2; 
-column-count:2;
-width: 350 px;
+  -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  width: 300 px;
 }
 
 .show-page div#map img{
@@ -71,17 +78,17 @@ width: 350 px;
   margin: 0;
   font-size: 1em;
   text-transform: capitalize;
+  text-align: center;
   font-weight: 300;
   background: url(opacitydark.png);
 }
 
 .show-page h3 {
-  margin: 0;
+  margin: 0 3% 0 3%;
   padding: 0.4em;
   text-align: center;
   font-size: 2.4em;
   font-weight: 300;
-  opacity: 0.8;
   border-radius: 3px 3px 0 0;
 }
 
@@ -92,36 +99,39 @@ width: 350 px;
   font-size: 1.5em;
   text-transform: capitalize;
   font-weight: 300;
-  opacity: 0.8;
 }
 
 .show-page div.time, 
 .show-page div.season, 
 .show-page div.payments, 
 .show-page div.products {
-  float: left;
-  width: 480px;
-  padding: 5px;
-  margin: 0;
   text-align: left;
   font-size: 1.5em;
   text-transform: capitalize;
   font-weight: 300;
-  opacity: 0.8;
-  /*border-radius: 3px 3px 0 0;*/
+  padding: 5px;
+  margin: 0;
 }
 
+.market-reviews h2 {
+  width: 750px;
+  margin: 0 3% 0 3%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  border-radius: 3px 3px 0 0;
+  background: url(opacitydark.png);
+}
+
+div.reviews-summary {
+   margin: 0 auto;
+}
 /*=--------------- review form -------------------*/
 .cbp-mc-form {
   width: 750px;
   margin: 0 auto;
-  background: url(opacity50.png)
   position: relative;
 }
-
-/*div.cbp-mc-column {
-  width: 100%;
-}*/
 
 .review-form {
   width: 750px;
