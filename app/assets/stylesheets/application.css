@@ -56,9 +56,29 @@ div.show-page {
   background-image :url(opacitydark.png);
 }  */
 
+header.show-page-header {
+  text-align: center;
+  background-image: url('opacitydark.png');
+  padding-top: 3em;
+}
+
+.show-page-header h1 {
+  margin: -1em;
+  font-weight: 300;
+  font-size: 2.625em;
+  line-height: 1.4;
+}
+
+.show-page-header span {
+/*  display: block;*/
+  padding: 0 0 0.6em 0.1em;
+  font-size: 60%;
+  color: #aca89a;
+}
+
 #page-container {
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 75px;
   padding-bottom: 50px;
   width: 750px;
 }
@@ -89,6 +109,7 @@ div#show-content {
 .show-page #directions {
   width: 750px;
   margin: 0;
+  padding-bottom: 10px;
   font-size: 1em;
   text-transform: capitalize;
   text-align: center;

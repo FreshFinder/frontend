@@ -1,19 +1,21 @@
-<%= render partial: "header" %>
-
-
 <div class="show-page">
+  <header class="show-page-header">
+    <h1>FreshFinder <span>Find the farmers' markets near you...</span>
+    </h1>
+  </header>
+
   <div id="page-container">
   <div id="show-content">
     <h3 class="name"><%= @market.name %></h3>
     <div id="directions">
-        <div id="map">
-        <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,12/750x300.png"></div>
-        <div class="address">
-          <%= @market.address.street %>
-          <%= @market.address.city %>, <%= @market.address.state %>
-          <%= @market.address.zipcode %>
-        </div>
-        <strong>Directions:</strong>  <%= @market.address.description %>
+      <div id="map">
+      <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,12/750x300.png"></div>
+      <div class="address">
+        <%= @market.address.street %>
+        <%= @market.address.city %>, <%= @market.address.state %>
+        <%= @market.address.zipcode %>
+      </div>
+      <strong>Directions:</strong>  <%= @market.address.description %>
     </div>
 
     <div class="show-column">
@@ -22,13 +24,13 @@
           <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
         <% end %>
         <% @market.season2.schedules.each do |schedule| %>
-               <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
         <% end %>
         <% @market.season4.schedules.each do |schedule| %>
-              <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
          <% end %>
         <% @market.season3.schedules.each do |schedule| %>
-              <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
         <% end %>
       </div>
 
@@ -55,13 +57,12 @@
   </div>
 </div>
 </div>
-<hr>
-<hr>
+
 
 <!-- Review form  -->
 <form class="cbp-mc-form">
     <fieldset class='review form'>
-      <legend> Please Review This Market </legend>
+      <legend> Share what you know about this market! </legend>
       <div class="cbp-mc-column">
       <%= form_tag "/api/v1/reviews" do %>
         <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
