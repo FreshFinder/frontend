@@ -327,10 +327,11 @@
   pointer-events:none;
   }
 
-.leaflet-popup-content div.wheat {
-  background-image: url('wheat.png');
+.leaflet-popup-content img.wheat {
+  background: url('wheat.png') no-repeat;
+  width: .5em;
+  height: 4em;
   float: left;
-  width: 18%;
   padding-right: 4em;
   position: relative;
 }

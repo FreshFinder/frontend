@@ -29,14 +29,16 @@ Map.addPopupToLayer = function(layer) {
 
   var market = layer.feature.properties
   var addressDescription = market.description
+  var street = market.street
+  var city = market.city
 
-  if (addressDescription == null) {
+  if (addressDescription == null || addressDescription == 'Other') {
     addressDescription = ""
   } else {
-    addressDescription = '(' + addressDescription + ')'
+    addressDescription = '<em>Directions:' + addressDescription + '</em>'
   }
   
-  var content = '<div class="wheat"></div> <div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + market.street + ', ' + market.city + '</br>' + addressDescription + '</div>';
+  var content = '<img class="wheat"/><div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + street + ',  ' + city + '</br>' + addressDescription + '</div>';
   
   return content;
 }
