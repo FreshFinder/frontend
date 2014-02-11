@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/reviews
+    body:
+      encoding: UTF-8
+      string: review%5Bcontent%5D=All+the+pineapples&review%5Bemail%5D=example%40example.com&review%5Bmarket_id%5D=&review%5Bname%5D=Lauren&review%5Btitle%5D=Great+market
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 422
+      message: ''
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 20:40:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 63972824-a757-4adc-bd01-c9ccded36248
+      X-Runtime:
+      - '0.006818'
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"market_id":["can''t be blank"]}}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 20:40:11 GMT
+recorded_with: VCR 2.8.0
