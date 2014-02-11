@@ -36,7 +36,7 @@ body,
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 }
-
+/*
 .st-pusher::after {
 	position: absolute;
 	top: 0;
@@ -48,7 +48,7 @@ body,
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
+}*/
 
 .st-menu-open .st-pusher::after {
 	width: 100%;

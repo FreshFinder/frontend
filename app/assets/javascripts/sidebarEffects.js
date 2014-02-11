@@ -35,7 +35,9 @@ $(document).ready(function() {
       // event type (if mobile use touch events)
       eventtype = mobilecheck() ? 'touchstart' : 'click',
       resetMenu = function() {
-        classie.remove( container, 'st-menu-open' );
+        // classie.remove( container, 'st-menu-open' );
+        var element = $("#menu-2").hide();
+        console.log(element)
       },
       bodyClickFn = function(evt) {
         if( !hasParentClass( evt.target, 'st-menu' ) ) {

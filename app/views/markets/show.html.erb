@@ -39,5 +39,37 @@
       <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
       <%= @market.season4.start_month %> <%= @market.season4.end_month %>
     </div>
+
+    <div class="products">
+      <%= @market.products %>
+    </div>
+
+    <div class="payments">
+      <%= @market.payment_types %>
+    </div>  
   </div>
 </div>
+
+
+<!-- Review form  -->
+<fieldset>
+  <%= form_tag "/api/v1/reviews" do %>
+    <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
+
+    <%= label_tag "name" %>
+      <%= text_field_tag "review[name]" %>
+
+    <%= label_tag "email" %>
+      <%= text_field_tag "review[email]" %>
+
+    <%= label_tag "title" %>
+      <%= text_field_tag "review[title]" %>
+
+    <%= label_tag "content", "Your Review" %>
+    <%= text_field_tag "review[content]" %>
+    <%= submit_tag "Write your review!" %>
+  <% end %>
+</fieldset>
+
+<!-- Reviews -->
+

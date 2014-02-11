@@ -1,6 +1,6 @@
 class Market
 
-  attr_reader :name, :address, :season1, :season2, :season3, :season4
+  attr_reader :name, :address, :season1, :season2, :season3, :season4, :products, :payment_types
 
   def initialize(json_response)
     market = json_response["market"]
