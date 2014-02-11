@@ -45,24 +45,34 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
 /*---------------------- show ------------------------*/
-
-.show-page div#map img{
-  width: 300px;
-  height: 300px;
-  top:0;
-  bottom:0; 
-  z-index: 99;
+.show-content{
+  width: 750px;
+ /* height: 100%;
+*/  margin: 0 auto;
+  background: url(opacity10.png);
 }
 
-.show-page .directions {
+.show-column {
+-moz-column-count:2; 
+-webkit-column-count:2; 
+column-count:2;
+width: 350 px;
+}
+
+.show-page div#map img{
+  position: relative;
+  width: 750px;
+  height: 300px;
+  padding: 10px auto;
+}
+
+.show-page #directions {
+  width: 750px;
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1em;
   text-transform: capitalize;
-  margin-right: 10%;
-  float: right;
   font-weight: 300;
-  opacity: 0.8;
-  border-radius: 3px 3px 0 0;
+  background: url(opacitydark.png);
 }
 
 .show-page h3 {
@@ -85,31 +95,40 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
   opacity: 0.8;
 }
 
-.show-page div.time, div.season {
-  margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
-  text-align: left;
-  font-size: 2em;
-  text-transform: capitalize;
-  font-weight: 300;
-  opacity: 0.8;
-  border-radius: 3px 3px 0 0;
-}
-
-.show-page div.payments {
-  margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
-  text-align: left;
-  font-size: 2em;
-  text-transform: capitalize;
-  font-weight: 300;
-  opacity: 0.8;
-  border-radius: 3px 3px 0 0;
-}
-
+.show-page div.time, 
+.show-page div.season, 
+.show-page div.payments, 
 .show-page div.products {
+  float: left;
+  width: 480px;
+  padding: 5px;
+  margin: 0;
+  text-align: left;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: 300;
+  opacity: 0.8;
+  /*border-radius: 3px 3px 0 0;*/
+}
+
+/*=--------------- review form -------------------*/
+.cbp-mc-form {
+  width: 750px;
+  margin: 0 auto;
+  background: url(opacity50.png)
+  position: relative;
+}
+
+/*div.cbp-mc-column {
+  width: 100%;
+}*/
+
+.review-form {
+  width: 750px;
+}
+
+fieldset.review-form {
+   width: 750px;
   margin: 0;
   padding: 0.4em;
   padding-right: 2em;
@@ -121,11 +140,49 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
   border-radius: 3px 3px 0 0;
 }
 
-.show-page img{
-  height: 1.2em;
-  width: 1.2em;
-  padding: 10px auto;
+.cbp-mc-form label {
+    display: block;
+    padding: 40px 5px 5px 2px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
+ 
+.cbp-mc-form input,
+.cbp-mc-form textarea,
+.cbp-mc-form select {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.4em;
+    padding: 5px 10px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    background: transparent;
+}
+
+.cbp-mc-form input,
+.cbp-mc-form textarea {
+    border: 3px solid #fff;
+}
+ 
+.cbp-mc-form textarea {
+    min-height: 200px;
+}
+ 
+.cbp-mc-form input:focus,
+.cbp-mc-form textarea:focus,
+.cbp-mc-form label:active + input,
+.cbp-mc-form label:active + textarea {
+    outline: none;
+    border: 3px solid #10689a;
+}
+ 
+.cbp-mc-form select:focus {
+    outline: none;
+}
+ 
 
 button.show-page  {
   display: block;

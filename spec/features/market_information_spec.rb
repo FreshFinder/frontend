@@ -10,9 +10,9 @@ describe 'visitor viewing market info' do
     expect(page).to have_text("August")
     expect(page).to have_text("17:00:00")
     expect(page).to have_text("20:00:00")
-    # expect(page).to have_text("Cheese")
-    # expect(page).to have_text("Wine")
-    # expect(page).to have_text("credit")
+    expect(page).to have_text("Cheese")
+    expect(page).to have_text("Wine")
+    expect(page).to have_text("credit")
   end
 
   describe 'visitor adding review to market' do

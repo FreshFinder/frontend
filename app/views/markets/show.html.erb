@@ -3,73 +3,90 @@
   <hr><hr>
 
   <div class="show-content">
+   
     <p><div class="address">
       <%= @market.address.street %>
       <%= @market.address.city %>, <%= @market.address.state %>
-      <br>
-      <%= @market.address.zipcode %>
-    </p></div>
+      <%= @market.address.zipcode %></p>
+    </div>
 
-      <div class="directions">
+    <div id="directions">
         <div id="map">
-          <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,10/300x300.png" />
-        </div>
-      <br>
-      <strong>Directions:</strong>  <%= @market.address.description %>
-      </div>
+        <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,12/750x300.png"></div>
+        <strong>Directions:</strong>  <%= @market.address.description %>
+    </div>
 
+    <div class="show-column">
     <div class="time">
+
       <% @market.season1.schedules.each do |schedule| %>
-        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time[0..4] %> until <%= schedule.end_time[0..4] %>
       <% end %>
       <% @market.season2.schedules.each do |schedule| %>
-         <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+         <strong><%= schedule.day %></strong>: <%= schedule.start_time[0..4] %> until <%= schedule.end_time[0..4] %>
       <% end %>
       <% @market.season4.schedules.each do |schedule| %>
-        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time[0..4] %> until <%= schedule.end_time[0..4] %>
        <% end %>
       <% @market.season3.schedules.each do |schedule| %>
-        <strong><%= schedule.day %></strong>: <%= schedule.start_time %> until <%= schedule.end_time %>
+        <strong><%= schedule.day %></strong>: <%= schedule.start_time[0..4] %> until <%= schedule.end_time[0..4] %>
       <% end %>
     </div>
 
     <div class="season">
+      <strong>Season:</strong>
       <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
       <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
       <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
       <%= @market.season4.start_month %> <%= @market.season4.end_month %>
-    </div>
+    </div></br>
+  </div>
 
+   <div class="show-column">
     <div class="products">
-      <%= @market.products %>
+      <strong>Products: </strong><%= @market.products.join(", ") %>
     </div>
 
     <div class="payments">
-      <%= @market.payment_types %>
-    </div>  
+      <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
+    </div>
+  </div>
+    <button id="review"> Review this Market </button>
   </div>
 </div>
 
 
 <!-- Review form  -->
-<fieldset>
+<form class="cbp-mc-form">
+<fieldset class='review form'>
+  <legend> Please Review This Market </legend>
+  <div class="cbp-mc-column">
   <%= form_tag "/api/v1/reviews" do %>
     <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
 
     <%= label_tag "name" %>
-      <%= text_field_tag "review[name]" %>
+      <%= text_field_tag "review[name]" %><br/>
 
     <%= label_tag "email" %>
-      <%= text_field_tag "review[email]" %>
+      <%= text_field_tag "review[email]" %><br/>
 
     <%= label_tag "title" %>
-      <%= text_field_tag "review[title]" %>
+      <%= text_field_tag "review[title]" %><br/>
 
     <%= label_tag "content", "Your Review" %>
     <%= text_field_tag "review[content]" %>
     <%= submit_tag "Write your review!" %>
   <% end %>
+</div>
 </fieldset>
+</form>
+
+<script>
+ $('.cbp-mc-form').hide();
+  $("button#review").click(function (e){
+    $('.cbp-mc-form').show();
+  });
+</script>
 
 <!-- Reviews -->
 
