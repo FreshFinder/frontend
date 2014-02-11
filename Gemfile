@@ -20,4 +20,6 @@ group :development, :test do
   gem 'jazz_hands'
   gem 'capybara'
   gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
 end
