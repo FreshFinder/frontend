@@ -10,12 +10,12 @@ class Market
     @season2 = Season.new(market["seasons"][1])
     @season3 = Season.new(market["seasons"][2])
     @season4 = Season.new(market["seasons"][3])
-    # @products = market["products"].each do |product|
-    #   Product.new(product)
-    # end
-    # @payment_types = market["payment_types"].each do |type|
-    #   PaymentType.new(type)
-    # end
+    @products = market["products"].each do |product|
+      Product.new(product)
+    end
+    @payment_types = market["payment_types"].each do |type|
+      PaymentType.new(type)
+    end
   end
 
 end
