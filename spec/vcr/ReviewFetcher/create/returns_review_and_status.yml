@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/v1/reviews
+    body:
+      encoding: UTF-8
+      string: review%5Bcontent%5D=All+the+pineapples&review%5Bemail%5D=example%40example.com&review%5Bmarket_id%5D=1&review%5Bname%5D=Lauren&review%5Btitle%5D=Great+market
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:59:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"caf36c7aec308a025e9d6b37c5ff0556"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 373684aa-29ae-4b3d-bb20-8fb0ce8063d0
+      X-Runtime:
+      - '0.006345'
+    body:
+      encoding: UTF-8
+      string: '{"id":24,"market_id":1,"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples","created_at":"2014-02-11T21:59:12.569Z","updated_at":"2014-02-11T21:59:12.569Z"}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:59:12 GMT
+recorded_with: VCR 2.8.0
