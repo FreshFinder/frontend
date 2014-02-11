@@ -2,6 +2,7 @@ jQuery(document).ready(function() {
 
 var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
+Map.mappy = mappy;
 
 $("#modal").hide();
 $(".modal-close").click(function (e){
