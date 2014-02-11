@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/markets/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 17:21:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"f47edccc8fe5456564373a0edc1d0716"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e35a5598-c784-41c5-aea0-7b2e4ecf29f4
+      X-Runtime:
+      - '0.286280'
+    body:
+      encoding: UTF-8
+      string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
+        Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
+        Goods"],"payment_types":["credit"]}}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 17:21:52 GMT
+recorded_with: VCR 2.8.0

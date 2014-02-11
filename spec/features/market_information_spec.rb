@@ -18,17 +18,19 @@ describe 'visitor viewing market info' do
   end
 
   describe 'visitor adding review to market' do
-    it "can see a reveiw form", :vcr do
+    it "can add a review", :vcr do
       visit market_path(1)
-      expect(page).to have_field("review[name]")
-      expect(page).to have_field("review[email]")
-      expect(page).to have_field("review[title]")
-      expect(page).to have_field("review[content]")
+      fill_in "review[name]",    with: 'Lauren'
+      fill_in "review[email]",   with: 'babyhappening@example.com'
+      fill_in "review[title]",   with: "Great samosas!"
+      fill_in "review[content]", with: "all the pineapples you could ever want."
+      binding.pry
+      click_on 'Write your review!'
     end
   end
 
   describe 'visitor looking for market reviews' do
-    it "has market reviews", :vcr do
+    xit "has market reviews", :vcr do
       visit market_path(1)
       expect(page).to have_text("The best market in VA!")
       expect(page).to have_text("I really love this market. It's a great place!")

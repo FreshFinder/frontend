@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/markets/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 502
+      message: Bad Gateway
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 17:20:46 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '537'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"52d6e536-219"'
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <title>Error</title>
+        <style>
+            body {
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana, Arial, sans-serif;
+            }
+        </style>
+        </head>
+        <body>
+        <h1>An error occurred.</h1>
+        <p>Sorry, the page you are looking for is currently unavailable.<br/>
+        Please try again later.</p>
+        <p>If you are the system administrator of this resource then you should check
+        the <a href="http://nginx.org/r/error_log">error log</a> for details.</p>
+        <p><em>Faithfully yours, nginx.</em></p>
+        </body>
+        </html>
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 17:20:46 GMT
+recorded_with: VCR 2.8.0
