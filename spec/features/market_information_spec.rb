@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'visitor viewing market info' do
-  it 'market show page' do
+  it 'market show page', :vcr do
     visit market_path(1)
     expect(page).to have_text("Y Not Wednesday Farmers Market at Town Center")
     expect(page).to have_text("201 Market Street")
@@ -18,7 +18,7 @@ describe 'visitor viewing market info' do
   end
 
   describe 'visitor adding review to market' do
-    it "can see a reveiw form" do
+    it "can see a reveiw form", :vcr do
       visit market_path(1)
       expect(page).to have_field("review[name]")
       expect(page).to have_field("review[email]")
@@ -28,7 +28,7 @@ describe 'visitor viewing market info' do
   end
 
   describe 'visitor looking for market reviews' do
-    it "has market reviews" do
+    it "has market reviews", :vcr do
       visit market_path(1)
       expect(page).to have_text("The best market in VA!")
       expect(page).to have_text("I really love this market. It's a great place!")
