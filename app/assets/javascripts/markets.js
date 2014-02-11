@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 
-var mappy = L.mapbox.map("map", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
+var mappy = L.mapbox.map("mappy", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 
 $("#modal").hide();
@@ -8,7 +8,7 @@ $(".modal-close").click(function (e){
   $('#modal').hide();
   });
 
-var marketData = "/api/v1/markets.json?address=true";
+var marketData = "http://localhost:5555/api/v1/markets.json?address=true";
 
 $.getJSON( marketData, function( data ) {
   $.each(data, function(index, val) {
@@ -32,7 +32,7 @@ $.getJSON( marketData, function( data ) {
 
         $('.market-item').click(function(el){
           var marketId = $(this).data("market-id"),
-              url = "/api/v1/markets/" + marketId;
+              url = "http://localhost:5555/api/v1/markets/" + marketId;
 
           $.getJSON( url, function( market_data ) {
             $.each(market_data, function (i,val) {
