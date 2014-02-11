@@ -1,17 +1,16 @@
+<%= render partial: "header" %>
+
 <div class="show-page">
-  <h3 class="name"><%= @market.name %></h3>
-  <hr><hr>
-
   <div id="show-content">
-    <div class="address">
-      <%= @market.address.street %>
-      <%= @market.address.city %>, <%= @market.address.state %>
-      <%= @market.address.zipcode %>
-    </div>
-
+    <h3 class="name"><%= @market.name %></h3>
     <div id="directions">
         <div id="map">
         <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,12/750x300.png"></div>
+        <div class="address">
+          <%= @market.address.street %>
+          <%= @market.address.city %>, <%= @market.address.state %>
+          <%= @market.address.zipcode %>
+        </div>
         <strong>Directions:</strong>  <%= @market.address.description %>
     </div>
 
