@@ -7,3 +7,36 @@
 <%= @market.address.lat %>
 <%= @market.address.lng %>
 <%= @market.address.description %>
+<%= @market.season1.season_number %>
+<%= @market.season1.start_month %>
+<%= @market.season1.end_month %>
+<% @market.season1.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season2.season_number %>
+<%= @market.season2.start_month %>
+<%= @market.season2.end_month %>
+<% @market.season2.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season3.season_number %>
+<%= @market.season3.start_month %>
+<%= @market.season3.end_month %>
+<% @market.season3.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+<%= @market.season4.season_number %>
+<%= @market.season4.start_month %>
+<%= @market.season4.end_month %>
+<% @market.season4.schedules.each do |schedule| %>
+  <%= schedule.day %>
+  <%= schedule.start_time %>
+  <%= schedule.end_time %>
+<% end %>
+
