@@ -18,14 +18,14 @@ describe 'visitor viewing market info' do
   end
 
   describe 'visitor adding review to market' do
-    it "can add a review", :vcr do
+    it "can add a review and then see it on the market page", :vcr do
       visit market_path(1)
       fill_in "review[name]",    with: 'Lauren'
       fill_in "review[email]",   with: 'babyhappening@example.com'
       fill_in "review[title]",   with: "Great samosas!"
       fill_in "review[content]", with: "all the pineapples you could ever want."
-      binding.pry
       click_on 'Write your review!'
+      expect(page).to have_text("Great samosas!")
     end
   end
 

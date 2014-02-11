@@ -45,7 +45,9 @@
 
 
 <!-- THIS IS THE FORM AREA -->
-<%= form_tag "/api/v1/reviews" do %>
+
+
+<%= form_tag "/markets/#{@market_id}/reviews" do %>
   <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
 
   <%= label_tag "name" %>

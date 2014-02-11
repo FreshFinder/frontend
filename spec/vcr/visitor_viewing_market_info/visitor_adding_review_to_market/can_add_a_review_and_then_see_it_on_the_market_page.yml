@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 17:11:18 GMT
+      - Tue, 11 Feb 2014 17:54:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -49,14 +49,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8341b0e9-0251-4e63-b8d5-8c3c78795bd3
+      - 83c7b6b1-1336-416d-bd39-9365cb796a3f
       X-Runtime:
-      - '0.033865'
+      - '0.020040'
     body:
       encoding: UTF-8
       string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
         Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
         Goods"],"payment_types":["credit"]}}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 17:11:18 GMT
+  recorded_at: Tue, 11 Feb 2014 17:54:35 GMT
 recorded_with: VCR 2.8.0
