@@ -1,26 +1,32 @@
 <%=  render partial: "header" %>
 
 <div id="show_page_container">
-
   <div id="image_container">
-    <div id="market_image"><img src="http://www.bayoucityoutdoors.com/clubportal/images/clubimages/3/Kristina/farmers-market-produce.jpg" alt="market image" width="600" height="450">
+    <div id="market_image"><img src="/assets/farmers-market-produce.jpg" alt="market image" width="600" height="450">
     </div>
   </div>
   <div class= "market_header">
     <h1><%= @market.name %></h1>
   </div>
   <div class= "market_info">
-    <ul>
-      <li><%= @market.address.street %> </li>
-      <li><%= @market.address.city %>, <%=  @market.address.state %></li>
-      <li><%= @market.address.zipcode %></li>
-      <li><%= @market.address.description %></li>
-    </ul>
+    <div class="market_info_table">
+      <table>
+        <tr>
+          <td><%= @market.address.street %> </td>
+        </tr>
+        <tr>
+          <td><%= @market.address.city %>, <%=  @market.address.state %></td>
+        </tr>
+        <tr>
+          <td><%= @market.address.zipcode %></td>
+        </tr>
+        <tr>
+          <td><%= @market.address.description %></td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
-
-
-
 
 <%= @market.address.lat %>
 <%= @market.address.lng %>
