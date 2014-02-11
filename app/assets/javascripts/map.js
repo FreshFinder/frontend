@@ -32,13 +32,15 @@ Map.addPopupToLayer = function(layer) {
   var street = market.street
   var city = market.city
 
-  if (addressDescription == null || addressDescription == 'Other') {
-    addressDescription = ""
+  if (addressDescription == null || addressDescription == 'Other' || street == null) {
+    addressDescription = "",
+    street = ""
   } else {
-    addressDescription = '<em>Directions:' + addressDescription + '</em>'
+    addressDescription = '<em>Directions: ' + addressDescription + '</em>',
+    street = street + ',  '
   }
   
-  var content = '<img class="wheat"/><div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + street + ',  ' + city + '</br>' + addressDescription + '</div>';
+  var content = '<img class="wheat"/><div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + city + '</br>' + addressDescription + '</div>';
   
   return content;
 }
