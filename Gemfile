@@ -9,16 +9,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'thin'
-gem 'draper'
+gem 'faraday'
 
 group :doc do
   gem 'sdoc', require: false
 end
 
 group :development, :test do
-  gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'rspec-rails'
+  gem 'jazz_hands'
   gem 'capybara'
   gem 'launchy'
 end
