@@ -48,7 +48,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 div.show-page {
   background-image: url(farming.jpg);
   z-index: 1;
-  height: 45em;
+/*  height: 45em;*/
   }
 
 div#show-content {
@@ -114,23 +114,23 @@ div#show-content {
 }
 
 .market-reviews h2 {
-  width: 750px;
-  margin: 0 3% 0 3%;
+  margin: 0 25% 0 25%;
   text-align: center;
   font-size: 2em;
   font-weight: 300;
-  border-radius: 3px 3px 0 0;
   background: url(opacitydark.png);
 }
 
 div.reviews-summary {
-   margin: 0 auto;
+  background: url(farming.jpg);
+  height: 30em;
 }
 /*=--------------- review form -------------------*/
 .cbp-mc-form {
   width: 750px;
   margin: 0 auto;
   position: relative;
+
 }
 
 .review-form {
@@ -138,7 +138,7 @@ div.reviews-summary {
 }
 
 fieldset.review-form {
-   width: 750px;
+  width: 750px;
   margin: 0;
   padding: 0.4em;
   padding-right: 2em;
@@ -177,10 +177,6 @@ fieldset.review-form {
     border: 3px solid #fff;
 }
  
-.cbp-mc-form textarea {
-    min-height: 200px;
-}
- 
 .cbp-mc-form input:focus,
 .cbp-mc-form textarea:focus,
 .cbp-mc-form label:active + input,
@@ -192,11 +188,25 @@ fieldset.review-form {
 .cbp-mc-form select:focus {
     outline: none;
 }
- 
+
+ .cbp-mc-form input.submit {
+    background: #10689a;
+    border: none;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
 
 button.show-page  {
   display: block;
   margin: 0 auto;
+  width: 100%;
   font-size: 1em;
   z-index: 101;
   background: #fff;

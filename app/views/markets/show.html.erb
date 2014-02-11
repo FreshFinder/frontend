@@ -63,28 +63,28 @@
       <div class="cbp-mc-column">
       <%= form_tag "/api/v1/reviews" do %>
         <%= hidden_field_tag "review[market_id]", "#{@market_id}" %>
-
         <%= label_tag "name" %>
           <%= text_field_tag "review[name]" %><br/>
-
         <%= label_tag "email" %>
           <%= text_field_tag "review[email]" %><br/>
-
         <%= label_tag "title" %>
           <%= text_field_tag "review[title]" %><br/>
 
         <%= label_tag "content", "Your Review" %>
         <%= text_field_tag "review[content]" %>
+        <br>
         <%= submit_tag "Write your review!" %>
+
       <% end %>
     </div>
   </fieldset>
 </form>
  
  <div class="reviews-summary">
-  <footer class="market-reviews">
-    <h2>Reviews from this market<h2>
-  </footer>
+  <div class="market-reviews">
+    <h2>Reviews from this market:<h2>
+
+  </div>
 </div>
 
 <script>
