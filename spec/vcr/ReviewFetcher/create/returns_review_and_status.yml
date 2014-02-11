@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.4.4
       Date:
-      - Tue, 11 Feb 2014 21:04:10 GMT
+      - Tue, 11 Feb 2014 21:59:12 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -47,17 +47,17 @@ http_interactions:
       Access-Control-Max-Age:
       - '1728000'
       Etag:
-      - '"b71fce673a614fce6f82303182b1944e"'
+      - '"caf36c7aec308a025e9d6b37c5ff0556"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 47659ad6-31a1-4bf9-bd12-70417105721f
+      - 373684aa-29ae-4b3d-bb20-8fb0ce8063d0
       X-Runtime:
-      - '0.006444'
+      - '0.006345'
     body:
       encoding: UTF-8
-      string: '{"id":9,"market_id":1,"name":"Lauren","email":"example@example.com","title":"Great
-        market","content":"All the pineapples","created_at":"2014-02-11T21:04:10.978Z","updated_at":"2014-02-11T21:04:10.978Z"}'
+      string: '{"id":24,"market_id":1,"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples","created_at":"2014-02-11T21:59:12.569Z","updated_at":"2014-02-11T21:59:12.569Z"}'
     http_version: 
-  recorded_at: Tue, 11 Feb 2014 21:04:10 GMT
+  recorded_at: Tue, 11 Feb 2014 21:59:12 GMT
 recorded_with: VCR 2.8.0
