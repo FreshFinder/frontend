@@ -327,16 +327,13 @@
   pointer-events:none;
   }
 
-.leaflet-popup-content .wheat {
+.leaflet-popup-content img.wheat {
+  background: url('wheat.png') no-repeat;
+  width: .5em;
+  height: 4em;
   float: left;
-  width: 18%;
   padding-right: 4em;
   position: relative;
-}
-.leaflet-popup-content .main-info {
- /* width: 69%;
-  padding:10px 10px 15px;*/
-  
 }
 
 .leaflet-popup-content .addressy {

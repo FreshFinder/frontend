@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/markets/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:59:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"f47edccc8fe5456564373a0edc1d0716"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1e3e6973-47fd-4677-a717-625715eac021
+      X-Runtime:
+      - '0.024296'
+    body:
+      encoding: UTF-8
+      string: '{"market":{"name":"Y Not Wednesday Farmers Market at Town Center","address":{"street":"201
+        Market Street","city":"Virginia Beach","state":"Virginia","zipcode":null,"lat":"36.841885","long":"-76.135361","description":"Other"},"seasons":[{"season_number":1,"start_month":"June","end_month":"August","schedules":[{"day":3,"start_time":"17:00:00","end_time":"20:00:00"}]},{"season_number":2,"start_month":null,"end_month":null,"schedules":[]},{"season_number":3,"start_month":null,"end_month":null,"schedules":[]},{"season_number":4,"start_month":null,"end_month":null,"schedules":[]}],"products":["Cheese","Flowers","Eggs","Seafood","Vegetables","Honey","Jams","Prepared","Soap","Wine","Baked
+        Goods"],"payment_types":["credit"]}}'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:59:12 GMT
+- request:
+    method: get
+    uri: http://localhost:8080/api/v1/reviews/1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Tue, 11 Feb 2014 21:59:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - X-Requested-With, X-Prototype-Version
+      Access-Control-Max-Age:
+      - '1728000'
+      Etag:
+      - '"8c5a99042dffd604614501f9e908d589"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 33e50862-ff8a-4959-b1f9-e28026d94d53
+      X-Runtime:
+      - '0.006241'
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Jane","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"Jody","email":"example@example.com","title":null,"content":"Great
+        market!"},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"Persa","email":"pokemon@email.com","title":"Good
+        review","content":"Hey hey"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""},{"name":"Lauren","email":"example@example.com","title":"Great
+        market","content":"All the pineapples"},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"","email":"","title":"","content":""},{"name":"Pony","email":"","title":"","content":""},{"name":"Mike","email":"Veggie","title":"At","content":"Coolk"},{"name":"Dood","email":"yeah","title":"","content":""},{"name":"HOMEWORK","email":"","title":"","content":""}]'
+    http_version: 
+  recorded_at: Tue, 11 Feb 2014 21:59:12 GMT
+recorded_with: VCR 2.8.0

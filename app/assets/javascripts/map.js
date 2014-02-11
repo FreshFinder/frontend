@@ -26,8 +26,21 @@ Map.addMarkerToLayer = function(val) {
 };
 
 Map.addPopupToLayer = function(layer) {
+
   var market = layer.feature.properties
-  var content = '<div class="wheat"><img src="assets/wheat.png"/></div> <div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + market.street + ', ' + market.city + '</br>' + '(' + market.description + ')' + '</div>';
+  var addressDescription = market.description
+  var street = market.street
+  var city = market.city
+
+  if (addressDescription == null || addressDescription == 'Other' || street == null) {
+    addressDescription = "",
+    street = ""
+  } else {
+    addressDescription = '<em>Directions: ' + addressDescription + '</em>',
+    street = street + ',  '
+  }
+  
+  var content = '<img class="wheat"/><div class="main-info"><h4 class="namer"><strong>'+ "<a href='/markets/" + market.market_id + "'" + '>' + market.name + '</a>' + '</strong></h4>' + '<p class="addressy">' + city + '</br>' + addressDescription + '</div>';
   
   return content;
 }
