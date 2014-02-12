@@ -54,13 +54,14 @@
           <%= @market.season4.start_month %> <%= @market.season4.end_month %>
           <% end %>
         </div>
+        <div class="payments">
+          <% unless @market.payment_types.nil? %>
+          <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
+          <% end %>
+        </div>
+
       </div>
 
-      <div class="payments">
-        <% unless @market.payment_types.nil? %>
-        <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
-        <% end %>
-      </div>
 
 
     </div>
