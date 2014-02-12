@@ -9,15 +9,9 @@
       <h3 class="name"><%= @market.name %></h3>
       <div id="directions">
         <div id="map">
-          <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,15/750x300.png"></div>
-        <div class="address">
-          <%= @market.address.street %>
-          <%= @market.address.city %>, <%= @market.address.state %>
-          <%= @market.address.zipcode %>
+          <img src="http://api.tiles.mapbox.com/v3/pzula.h69mf89n/pin-m-star(<%= @market.address.lng %>,<%= @market.address.lat %>)/<%= @market.address.lng %>,<%= @market.address.lat %>,15/750x300.png">
         </div>
-        <% unless @market.address.description.nil? %>
-        <strong>Location: </strong>  <%= @market.address.description %>
-        <% end %>
+        <%= render partial: 'address', locals: { market: @market } %>
       </div>
 
       <div class="show-column1">
