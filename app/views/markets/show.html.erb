@@ -63,9 +63,6 @@
 
     <button id="review"> Review this Market </button>
   </div>
-</div>
-
-
 
 <!-- Review form  -->
 <div class="cbp-mc-form">
@@ -92,17 +89,16 @@
         <%= submit_tag "Write your review!" %>
       <% end %>
 
+      </div>
     </div>
   </div>
-</div>
-
- <div class="reviews-summary">
-  <div class="market-reviews">
-    <h2>Reviews from this market:<h2>
-    <%= render partial:"reviews/review", collection: @reviews %>
+  <br>
+    <div class="reviews-summary">
+      <h2>Reviews from this market:<h2>
+        <%= render partial:"reviews/review", collection: @reviews %>
+    </div>
   </div>
-</div>
-</div>
+ </div>
 
 <script>
  $('.cbp-mc-form').hide();
