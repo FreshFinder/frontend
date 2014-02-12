@@ -18,8 +18,9 @@ Map.addMarkerToLayer = function(val) {
           street: val.address.street,
           city: val.address.city,
           name: val.name,
-          'marker-size': 'small',
-          'marker-color': '#9CFF00'
+          'marker-size': 'medium',
+          'marker-color': '#2ca25f',
+          'marker-symbol': 'park2'
         }
       })
   return markerLayer;
