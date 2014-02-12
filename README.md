@@ -1,8 +1,8 @@
-FreshFinder:  The Place to Find and Review Farmer's Markets
-===========================================================
+FreshFinder:  
+============
+##The Place to Find and Review Farmer's Markets
 
 [![Code Climate](https://codeclimate.com/repos/52f04f28e30ba07a88003382/badges/ab46d8f8841f0875ddea/gpa.png)](https://codeclimate.com/repos/52f04f28e30ba07a88003382/feed)
-
 
 This site can be found at www.freshfinder.us.  It is a site dedicated to finding fresh food in your area using USDA data. The end goal is to be able to have crowd-sourced reviews of the markets so that people understand the markets better (aka, what is sold, what is good, etc).
 
@@ -14,7 +14,7 @@ Homepage
 
 Market Page
 -----------
-![Market]("https://s3-us-west-2.amazonaws.com/bearyhungry/market.png")
+![Market](https://s3.amazonaws.com/bearlyhungry/market.png)
 
 
 
