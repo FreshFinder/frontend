@@ -12,9 +12,10 @@ jQuery(document).ready(function() {
       var list = $(".listings");
       list.empty();
       $.each(data, function(index, market){
+        console.log(market)
         if (index == 0) {
           var map = Map.mappy;
-          map.setView([ market.address.lat, market.address.long], 11);
+          mappy.setView([ market.address.lat, market.address.long], 11);
         };
 
         var markerLayer = Map.addMarkerToLayer(market).addTo(Map.mappy);

@@ -1,13 +1,4 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require normalize
  *= require demo
  *= require component
@@ -18,12 +9,21 @@
 /*------------------ home page ----------------*/
 body {
   margin:0;
-  padding:0; }
+  padding:0; 
+  }
 
 .stacker {
   width: 20px;
   height: 20px;
   }
+
+#search-box {
+  padding: 1em 0 0.4em 0.1em;
+  font-size: 60%;
+  color: #aca89a;
+  text-align: center;
+  font-family: 'Lato', Arial, sans-serif;
+}
 
 /*---------------  side bar ---------------------*/
 .smaller{
@@ -39,9 +39,9 @@ body {
 
 
 .leaflet-popup-content-wrapper, .map-legends, .map-tooltip {
-background: #962626;
-border-radius: 10px;
-box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+  background: #962626;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10);
 }
 
 /*---------------------- show ------------------------*/
@@ -81,17 +81,27 @@ header.show-page-header {
 div#show-content {
   background: url(opacitydark.png);
   width: 750px;
-  /*border: 25px;*/
   margin: 0 auto;
   z-index: 999;
   height: 100%;
 }
 
-.show-column {
+.show-column1 {
   -moz-column-count:2; 
   -webkit-column-count:2; 
   column-count:2;
-  width: 300 px;
+  width: 720px;
+  height: 200px;
+  margin: 15px;
+}
+
+.show-column2 {
+  -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  width: 720px;
+  height: 150px;
+  margin: 15px;
 }
 
 .show-page div#map img{
@@ -112,7 +122,7 @@ div#show-content {
   background: url(opacitydark.png);
 }
 
-.show-page h3 {
+.show-page h3.name {
   margin: 0 3% 0 3%;
   padding: 0.4em;
   text-align: center;
@@ -142,39 +152,29 @@ div#show-content {
   margin: 0;
 }
 
-.market-reviews h2 {
-  margin: 3% 25% 0 25%;
-  text-align: center;
-  font-size: 2em;
-  font-weight: 300;
-  background: url(opacitydark.png);
-}
-
 div.reviews-summary {
-  /*background: url(farming.jpg);*/
   height: 30em;
 }
 /*=--------------- review form -------------------*/
-.cbp-mc-form {
+.cbp-mc-form, .reviews-summary {
   width: 750px;
-  margin: 0 auto;
   position: relative;
+  text-align: center;
 }
 
-div.review-form {
+div.review-form, .reviews-summary {
   background: url(opacitydark.png); 
-  margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
-  text-align: left;
+  padding: 0.2em 2em;
+  text-align: center;
   font-size: 1.5em;
   text-transform: capitalize;
   font-weight: 300;
   border-radius: 3px 3px 0 0;
 }
 
-.review-form h4 {
+.review-form h3.form-header {
   text-align: center;
+  font-weight: 300;
   }
 
 button#close-form {
@@ -187,14 +187,26 @@ button#close-form {
   margin-left: 3px;
 }  
 
-.cbp-mc-column {
+button.submit {
+      
+} 
+
+.cbp-mc-column1 {
   padding: 10px;
+  width: 350px;
+  float: left;
+}
+
+.cbp-mc-column2 {
+  padding: 10px;
+  width: 350px;
+  float: left;
 }
 
 .cbp-mc-form label {
   display: block;
   padding: 40px 5px 5px 2px;
-  font-size: 1.1em;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
@@ -204,18 +216,14 @@ button#close-form {
 .cbp-mc-form textarea,
 .cbp-mc-form select {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1.4em;
-  padding: 5px 10px;
+  /*line-height: 10px;*/
+  font-size: 20px;
+  /*padding: 5px 10px;*/
   color: #fff;
-  display: block;
+  /*display: block;*/
   width: 100%;
+  border: 1px solid #fff;
   background: transparent;
-}
-
-.cbp-mc-form input,
-.cbp-mc-form textarea {
-  border: 3px solid #fff;
 }
  
 .cbp-mc-form input:focus,
@@ -230,20 +238,6 @@ button#close-form {
     outline: none;
 }
 
- .cbp-mc-form input.submit {
-    background: #10689a;
-    border: none;
-    color: #fff;
-    width: auto;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border-radius: 2px;
-    letter-spacing: 1px;
-}
-
 button.show-page  {
   display: block;
   margin: 0 auto;
@@ -256,4 +250,58 @@ button.show-page  {
   top: 10px;
   line-height:0.25em;
   right: 420px;
+}
+.market-reviews {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: 8em;
+}
+
+
+h5.title {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0;
+  margin:0;
+}
+
+.market-reviews hr{
+  padding: 0;
+}
+
+.reviewer-profile h2{
+  display: block;
+  font-size: 0.3em;
+  font-weight: italics;
+  padding: 0;
+  margin:0;
+  text-align: left;
+  float: right;
+}
+
+div.gravatar {
+  background: url(gravatar.png);
+  width: 40px;
+  height: 40px;
+}
+
+span.gigantic {
+  margin-top: -1em; 
+  height: auto; 
+  font-size:1em; 
+} 
+
+q:before { 
+  content: '\201C'; 
+  font-size:300%;
+  font-family: Times New Roman; 
+  margin: 0;
+} 
+
+q:after { 
+  content: '\201D'; 
+  font-size:300%; 
+  font-family: Times New Roman; 
+  margin: 0;
 }
