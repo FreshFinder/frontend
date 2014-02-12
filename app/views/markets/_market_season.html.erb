@@ -1,0 +1,5 @@
+<% [1, 2, 3, 4].each do |number| %>
+  <span class="season">
+    <%= market.send(:"season#{number}").start_month %> to <%= market.season1.end_month %>
+  </span>
+<% end %>

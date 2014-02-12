@@ -17,16 +17,16 @@
       <div class="show-column1">
         <div class="time">
           <% @market.season1.schedules.each do |schedule| %>
-          <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
           <% end %>
           <% @market.season2.schedules.each do |schedule| %>
-          <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
           <% end %>
-          <% @market.season4.schedules.each do |schedule| %>
-          <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <% @market.season4.schedules.each do |schedule| %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
           <% end %>
           <% @market.season3.schedules.each do |schedule| %>
-          <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
           <% end %>
         </div>
 
@@ -41,11 +41,8 @@
       <div class="show-column2">
         <div class="season">
           <% unless @market.season1.nil? %>
-          <strong>Season:</strong>
-          <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
-          <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
-          <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
-          <%= @market.season4.start_month %> <%= @market.season4.end_month %>
+            <strong>Season:</strong>
+            <%= render partial: 'market_season', locals: { market: @market } %>
           <% end %>
         </div>
         <div class="payments">
