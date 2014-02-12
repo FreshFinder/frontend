@@ -57,59 +57,63 @@
 
         <div class="payments">
           <% unless @market.payment_types.nil? %>
-         <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
-         <% end %>
-       </div>
-
-       
-     </div>
-
-     <button id="review"> Review this Market </button>
+          <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
+          <% end %>
+        </div>
 
 
+      </div>
 
-     <!-- Review form  -->
-     <div class="cbp-mc-form">
+      <button id="review"> Review this Market </button>
+
+
+      <!-- Review form  -->
+
       <div class='review-form'>
         <button id="close-form"> x </button>
         <h3 class="form-header"> Share what you know about this market! </h3>
-        <div class="cbp-mc-column1">
-          <%= form_tag "/markets/#{@market_id}/reviews" do %>
-          <%= hidden_field_tag "market_id", "#{@market_id}" %>
+        
+        <%= form_tag "/markets/#{@market_id}/reviews" do %>
+          <%= field_set_tag nil, class:"reviewer-info" do %>
+            <%= hidden_field_tag "market_id", "#{@market_id}" %>
 
-          <%= label_tag "name" %>
-          <%= text_field_tag "name" %>
+            <%= label_tag "name" %>
+            <%= text_field_tag "name" %>
 
-          <%= label_tag "email" %>
-          <%= text_field_tag "email" %>
-        </div>
-        <div class="cbp-mc-column2">
-          <%= label_tag "content", "Your Review" %>
-          <%= text_area_tag "content" %>
-        </div>
+            <%= label_tag "email" %>
+            <%= text_field_tag "email" %>
+          <% end %>
 
-        <button class="submit"> Submit your review! </button>
+          <%= field_set_tag nil, class:"review-body" do %>
+            <%= label_tag "title", "Headline or summary" %>
+            <%= text_field_tag "title" %>
+
+            <%= label_tag "content", "Your review" %>
+            <%= text_area_tag "content" %>
+          <% end %>
+
+          <button class="submit"> Submit your review! </button>
         <% end %>
 
       </div>
-    </div>
-    <br>
-    <div class="reviews-summary">
-      <h2>Reviews from this market:<h2>
-        <%= render partial:"reviews/review", collection: @reviews %>
+
+      <br>
+      <div class="reviews-summary">
+        <h2>Reviews from this market:<h2>
+          <%= render partial:"reviews/review", collection: @reviews %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-$('.cbp-mc-form').hide();
-$("button#review").click(function (e){
-  $('.cbp-mc-form').show();
-});
-$("button#close-form").click(function (e){
+  <script>
   $('.cbp-mc-form').hide();
-});
-</script>
+  $("button#review").click(function (e){
+    $('.cbp-mc-form').show();
+  });
+  $("button#close-form").click(function (e){
+    $('.cbp-mc-form').hide();
+  });
+  </script>
 
 

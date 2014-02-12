@@ -1,15 +1,11 @@
-<div class="market-reviews">
-  
-  <q><span class='gigantic'><%= review.content %></span></q>
-
-
-<div class='reviewer-profile'>
-  <div class='gravatar'></div>
-    <% unless review.email.nil? %>
-      <h2 class="reviewer-email">  (<%= review.email %>)</h2>
+<div class="review">
+  <h2 class="review-title">
+    <% unless review.title.empty? %>
+      <%= review.title %>
     <% end %>
-    <% unless review.name.nil? %>
-      <h2 class="reviewer">~<%= review.name %></h2>
+  </h2>
+  <p class='content'><%= review.content %></p>
+    <% unless review.name.empty? %>
+      <p class="reviewer">- <%= review.name %></p>
     <% end %>
-  </div>
 </div>
