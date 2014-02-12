@@ -152,9 +152,6 @@ div#show-content {
   margin: 0;
 }
 
-div.reviews-summary {
-  height: 30em;
-}
 /*=--------------- review form -------------------*/
 .cbp-mc-form, .reviews-summary {
   width: 750px;
@@ -257,6 +254,15 @@ button.show-page  {
   height: 8em;
 }
 
+div.review {
+  padding-bottom: 15px;
+  border-bottom: 1px dotted #ccc;
+}
+
+h2.review-title{
+  font-size: 1em;
+  text-align: left;
+}
 
 h5.title {
   display: block;
@@ -266,32 +272,18 @@ h5.title {
   margin:0;
 }
 
-.reviewer-profile {
-  display: block;
+p.reviewer {
   font-size: 0.5em;
   letter-spacing: 1px;
   padding: 0;
   margin:0;
-  text-align: left;
-  float: right;
+  text-align: right;
 }
 
-span.gigantic {
+p.content {
   margin-top: -1em; 
   height: auto; 
-  font-size:1em; 
+  font-size:.6em; 
+  font-weight: normal;
+  text-align: left;
 } 
-
-q:before { 
-  content: '\201C'; 
-  font-size:300%;
-  font-family: Times New Roman; 
-  margin: 0;
-} 
-
-q:after { 
-  content: '\201D'; 
-  font-size:300%; 
-  font-family: Times New Roman; 
-  margin: 0;
-}

@@ -1,10 +1,11 @@
-<div class="market-reviews">
-  
-  <q><span class='gigantic'><%= review.content %></span></q>
-
-
-<div class='reviewer-profile'>
-  <% unless review.name.empty? %>
-    <span class="reviewer">- <%= review.name %></span>
-  <% end %>
+<div class="review">
+  <h2 class="review-title">
+    <% unless review.title.empty? %>
+      <%= review.title %>
+    <% end %>
+  </h2>
+  <p class='content'><%= review.content %></p>
+    <% unless review.name.empty? %>
+      <p class="reviewer">- <%= review.name %></p>
+    <% end %>
 </div>
