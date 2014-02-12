@@ -328,7 +328,7 @@
   }
 
 .leaflet-popup-content img.wheat {
-  background: url('wheat.png') no-repeat;
+  background: url('/assets/wheat.png') no-repeat;
   width: .5em;
   height: 4em;
   float: left;
