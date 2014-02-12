@@ -1,4 +1,11 @@
-<%= review.name %>
-<%= review.email %>
-<%= review.title %>
-<%= review.content %>
+<div class="review">
+  <h2 class="review-title">
+    <% unless review.title.empty? %>
+      <%= review.title %>
+    <% end %>
+  </h2>
+  <p class='content'><%= review.content %></p>
+    <% unless review.name.empty? %>
+      <p class="reviewer">- <%= review.name %></p>
+    <% end %>
+</div>
