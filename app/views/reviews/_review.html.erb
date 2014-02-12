@@ -1,11 +1,11 @@
 <div class="review">
   <h2 class="review-title">
-    <% unless review.title.empty? %>
+    <% if review.title %>
       <%= review.title %>
     <% end %>
   </h2>
   <p class='content'><%= review.content %></p>
-    <% unless review.name.empty? %>
+    <% if review.name %>
       <p class="reviewer">- <%= review.name %></p>
     <% end %>
 </div>
