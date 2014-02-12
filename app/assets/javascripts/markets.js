@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
 
+Geolocation.userPosition = [39.7392, -104.9847];
 var mappy = L.mapbox.map("mappy", "pzula.h69mf89n", { zoomControl: false }).setView(Geolocation.userPosition, 10);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 Map.mappy = mappy;
