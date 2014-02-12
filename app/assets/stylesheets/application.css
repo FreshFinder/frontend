@@ -159,6 +159,15 @@ div#show-content {
   text-align: center;
 }
 
+.reviewer-info {
+  border: 0px;
+  
+}
+
+.review-body{
+  border: 0px;
+}
+
 div.review-form, .reviews-summary {
   background: url(opacitydark.png); 
   padding: 0.2em 2em;
