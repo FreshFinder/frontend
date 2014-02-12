@@ -22,7 +22,7 @@ describe 'visitor viewing market info' do
       fill_in "email",   with: 'babyhappening@example.com'
       fill_in "title",   with: "Great samosas!"
       fill_in "content", with: "all the kiwi you could ever want."
-      click_on 'Write your review!'
+      click_on 'Submit your review!'
       expect(page).to have_text("Great samosas!")
     end
   end
