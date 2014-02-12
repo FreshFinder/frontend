@@ -86,11 +86,22 @@ div#show-content {
   height: 100%;
 }
 
-.show-column {
+.show-column1 {
   -moz-column-count:2; 
   -webkit-column-count:2; 
   column-count:2;
-  width: 300 px;
+  width: 720px;
+  height: 200px;
+  margin: 15px;
+}
+
+.show-column2 {
+  -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  width: 720px;
+  height: 150px;
+  margin: 15px;
 }
 
 .show-page div#map img{
@@ -111,7 +122,7 @@ div#show-content {
   background: url(opacitydark.png);
 }
 
-.show-page h3 {
+.show-page h3.name {
   margin: 0 3% 0 3%;
   padding: 0.4em;
   text-align: center;
@@ -154,15 +165,18 @@ div.reviews-summary {
 div.review-form, .reviews-summary {
   background: url(opacitydark.png); 
   padding: 0.2em 2em;
-  text-align: center;
+  margin: 0;
+  padding: 25px;
+  text-align: left;
   font-size: 1.5em;
   text-transform: capitalize;
   font-weight: 300;
   border-radius: 3px 3px 0 0;
 }
 
-.review-form h4 {
+.review-form h3.form-header {
   text-align: center;
+  font-weight: 300;
   }
 
 button#close-form {
@@ -175,14 +189,25 @@ button#close-form {
   margin-left: 3px;
 }  
 
-.cbp-mc-column {
+button#submit {
+} 
+
+.cbp-mc-column1 {
   padding: 10px;
+  width: 350px;
+  float: left;
+}
+
+.cbp-mc-column2 {
+  padding: 10px;
+  width: 350px;
+  float: left;
 }
 
 .cbp-mc-form label {
   display: block;
   padding: 40px 5px 5px 2px;
-  font-size: 1.1em;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
@@ -192,18 +217,14 @@ button#close-form {
 .cbp-mc-form textarea,
 .cbp-mc-form select {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1.4em;
-  padding: 5px 10px;
+  /*line-height: 10px;*/
+  font-size: 20px;
+  /*padding: 5px 10px;*/
   color: #fff;
-  display: block;
+  /*display: block;*/
   width: 100%;
+  border: 1px solid #fff;
   background: transparent;
-}
-
-.cbp-mc-form input,
-.cbp-mc-form textarea {
-  border: 3px solid #fff;
 }
  
 .cbp-mc-form input:focus,
@@ -216,20 +237,6 @@ button#close-form {
  
 .cbp-mc-form select:focus {
     outline: none;
-}
-
- .cbp-mc-form input.submit {
-    background: #10689a;
-    border: none;
-    color: #fff;
-    width: auto;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border-radius: 2px;
-    letter-spacing: 1px;
 }
 
 button.show-page  {
