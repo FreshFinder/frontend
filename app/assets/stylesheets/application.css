@@ -112,7 +112,7 @@ div#show-content {
   background: url(opacitydark.png);
 }
 
-.show-page h3 {
+.show-page h3.name {
   margin: 0 3% 0 3%;
   padding: 0.4em;
   text-align: center;
@@ -164,8 +164,7 @@ div.reviews-summary {
 div.review-form {
   background: url(opacitydark.png); 
   margin: 0;
-  padding: 0.4em;
-  padding-right: 2em;
+  padding: 25px;
   text-align: left;
   font-size: 1.5em;
   text-transform: capitalize;
@@ -173,8 +172,9 @@ div.review-form {
   border-radius: 3px 3px 0 0;
 }
 
-.review-form h4 {
+.review-form h3.form-header {
   text-align: center;
+  font-weight: 300;
   }
 
 button#close-form {
@@ -187,6 +187,9 @@ button#close-form {
   margin-left: 3px;
 }  
 
+button#submit {
+} 
+
 .cbp-mc-column {
   padding: 10px;
 }
@@ -194,7 +197,7 @@ button#close-form {
 .cbp-mc-form label {
   display: block;
   padding: 40px 5px 5px 2px;
-  font-size: 1.1em;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
@@ -204,18 +207,14 @@ button#close-form {
 .cbp-mc-form textarea,
 .cbp-mc-form select {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1.4em;
-  padding: 5px 10px;
-  color: #fff;
-  display: block;
+  /*line-height: 10px;*/
+  /*font-size: 20px;*/
+  /*padding: 5px 10px;*/
+  /*color: #fff;*/
+  /*display: block;*/
   width: 100%;
+  border: 1px solid #fff;
   background: transparent;
-}
-
-.cbp-mc-form input,
-.cbp-mc-form textarea {
-  border: 3px solid #fff;
 }
  
 .cbp-mc-form input:focus,
