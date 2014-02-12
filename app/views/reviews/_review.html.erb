@@ -4,12 +4,7 @@
 
 
 <div class='reviewer-profile'>
-  <div class='gravatar'></div>
-    <% unless review.email.nil? %>
-      <h2 class="reviewer-email">  (<%= review.email %>)</h2>
-    <% end %>
-    <% unless review.name.nil? %>
-      <h2 class="reviewer">~<%= review.name %></h2>
-    <% end %>
-  </div>
+  <% unless review.name.empty? %>
+    <span class="reviewer">- <%= review.name %></span>
+  <% end %>
 </div>

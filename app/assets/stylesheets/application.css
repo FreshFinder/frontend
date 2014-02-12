@@ -266,24 +266,14 @@ h5.title {
   margin:0;
 }
 
-.market-reviews hr{
-  padding: 0;
-}
-
-.reviewer-profile h2{
+.reviewer-profile {
   display: block;
-  font-size: 0.3em;
-  font-weight: italics;
+  font-size: 0.5em;
+  letter-spacing: 1px;
   padding: 0;
   margin:0;
   text-align: left;
   float: right;
-}
-
-div.gravatar {
-  background: url(gravatar.png);
-  width: 40px;
-  height: 40px;
 }
 
 span.gigantic {
