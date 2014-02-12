@@ -47,14 +47,14 @@ body {
 /*---------------------- show ------------------------*/
 
 div.show-page {
-  background: url(Farmers-Market-2.jpg) no-repeat center center;
+  background: image-url('Farmers-Market-2.jpg') no-repeat center center;
   min-height: 100%;
   background-size:cover;
 }
 
 header.show-page-header {
   text-align: center;
-  background-image: url(opacitydark.png);
+  background: image-url('opacitydark.png');
   padding-top: 3em;
 }
 
@@ -79,7 +79,7 @@ header.show-page-header {
 }
 
 div#show-content {
-  background: url(opacitydark.png);
+  background: image-url('opacitydark.png');
   width: 750px;
   margin: 0 auto;
   z-index: 999;
@@ -119,7 +119,7 @@ div#show-content {
   text-transform: capitalize;
   text-align: center;
   font-weight: 300;
-  background: url(opacitydark.png);
+  background: image-url('opacitydark.png');
 }
 
 .show-page h3.name {
@@ -169,7 +169,7 @@ div#show-content {
 }
 
 div.review-form, .reviews-summary {
-  background: url(opacitydark.png); 
+  background: image-url('opacitydark.png');
   padding: 0.2em 2em;
   text-align: center;
   font-size: 1.5em;
