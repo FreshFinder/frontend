@@ -18,7 +18,7 @@
       <strong>Location: </strong>  <%= @market.address.description %>
     </div>
 
-    <div class="show-column">
+    <div class="show-column1">
       <div class="time">
         <% @market.season1.schedules.each do |schedule| %>
           <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
@@ -34,18 +34,18 @@
         <% end %>
       </div>
 
+      <div class="products">
+        <strong>Products: </strong><%= @market.products.join(", ") %>
+      </div>
+    </div>
+
+   <div class="show-column2">
       <div class="season">
         <strong>Season:</strong>
         <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
         <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
         <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
         <%= @market.season4.start_month %> <%= @market.season4.end_month %>
-      </div>
-    </div>
-
-   <div class="show-column">
-      <div class="products">
-        <strong>Products: </strong><%= @market.products.join(", ") %>
       </div>
 
       <div class="payments">
@@ -62,21 +62,22 @@
   <div class='review-form'>
     <button id="close-form"> x </button>
     <h3 class="form-header"> Share what you know about this market! </h3>
-    <div class="cbp-mc-column">
+    <div class="cbp-mc-column1">
       <%= form_tag "/markets/#{@market_id}/reviews" do %>
         <%= hidden_field_tag "market_id", "#{@market_id}" %>
-
-        <%= label_tag "title" %>
-          <%= text_field_tag "title" %>
-
-        <%= label_tag "content", "Your Review" %>
-          <%= text_field_tag "content" %>
 
         <%= label_tag "name" %>
           <%= text_field_tag "name" %>
 
         <%= label_tag "email" %>
           <%= text_field_tag "email" %>
+      </div>
+      <div class="cbp-mc-column2">
+        <%= label_tag "title" %>
+          <%= text_field_tag "title" %>
+
+        <%= label_tag "content", "Your Review" %>
+          <%= text_field_tag "content" %>
       </div>
         
       <button id="submit"> Submit your review! </button>

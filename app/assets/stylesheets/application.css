@@ -87,11 +87,22 @@ div#show-content {
   height: 100%;
 }
 
-.show-column {
+.show-column1 {
   -moz-column-count:2; 
   -webkit-column-count:2; 
   column-count:2;
-  width: 300 px;
+  width: 720px;
+  height: 200px;
+  margin: 15px;
+}
+
+.show-column2 {
+  -moz-column-count:2; 
+  -webkit-column-count:2; 
+  column-count:2;
+  width: 720px;
+  height: 150px;
+  margin: 15px;
 }
 
 .show-page div#map img{
@@ -151,7 +162,6 @@ div#show-content {
 }
 
 div.reviews-summary {
-  /*background: url(farming.jpg);*/
   height: 30em;
 }
 /*=--------------- review form -------------------*/
@@ -190,8 +200,16 @@ button#close-form {
 button#submit {
 } 
 
-.cbp-mc-column {
+.cbp-mc-column1 {
   padding: 10px;
+  width: 350px;
+  float: left;
+}
+
+.cbp-mc-column2 {
+  padding: 10px;
+  width: 350px;
+  float: left;
 }
 
 .cbp-mc-form label {
@@ -208,9 +226,9 @@ button#submit {
 .cbp-mc-form select {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   /*line-height: 10px;*/
-  /*font-size: 20px;*/
+  font-size: 20px;
   /*padding: 5px 10px;*/
-  /*color: #fff;*/
+  color: #fff;
   /*display: block;*/
   width: 100%;
   border: 1px solid #fff;
@@ -227,20 +245,6 @@ button#submit {
  
 .cbp-mc-form select:focus {
     outline: none;
-}
-
- .cbp-mc-form input.submit {
-    background: #10689a;
-    border: none;
-    color: #fff;
-    width: auto;
-    cursor: pointer;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1em;
-    border-radius: 2px;
-    letter-spacing: 1px;
 }
 
 button.show-page  {
