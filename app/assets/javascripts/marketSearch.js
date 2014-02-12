@@ -17,6 +17,17 @@ jQuery(document).ready(function() {
           map.setView([ market.address.lat, market.address.long], 11);
         };
 
+        var markerLayer = Map.addMarkerToLayer(market).addTo(Map.mappy);
+
+        markerLayer.eachLayer(function (layer) {
+          var content = Map.addPopupToLayer(layer);
+          layer.bindPopup(content, {
+            closeButton: false });
+          layer.on('click', function(e) {
+            mappy.setView(e.latlng);
+          });
+        });
+
         $(list).append('<li><a class="icon icon-data market-item" data-market-id=' + market.id + '>' + market.name + '<p class="smaller"> <strong>' + market.address.street + '</strong> ' + market.address.city + ', ' + market.address.state + '</p></a></li>');
       });
     });
