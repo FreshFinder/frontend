@@ -37,7 +37,6 @@ $(document).ready(function() {
       resetMenu = function() {
         // classie.remove( container, 'st-menu-open' );
         var element = $("#menu-2").hide();
-        console.log(element)
       },
       bodyClickFn = function(evt) {
         if( !hasParentClass( evt.target, 'st-menu' ) ) {
