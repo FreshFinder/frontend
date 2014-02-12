@@ -303,6 +303,10 @@ div.review {
   border-bottom: 1px dotted #ccc;
 }
 
+div.review:last-child {
+  border-bottom: 0px;
+}
+
 h2.review-title{
   font-size: 1em;
   text-align: left;
