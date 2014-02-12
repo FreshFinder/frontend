@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 
-var mappy = L.mapbox.map("mappy", "pzula.h69mf89n", { zoomControl: false }).setView([40.52086, -100.679523], 4);
+var mappy = L.mapbox.map("mappy", "pzula.h69mf89n", { zoomControl: false }).setView(Geolocation.userPosition, 10);
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 Map.mappy = mappy;
 
@@ -9,7 +9,9 @@ $(".modal-close").click(function (e){
   $('#modal').hide();
   });
 
-var marketData = "/api/v1/markets.json?address=true";
+var coords = Geolocation.userPosition;
+var coordsForUrl = coords[0] + "," + coords[1];
+var marketData = "/api/v1/search/markets?zipcode=" + coordsForUrl;
 
 $.getJSON( marketData, function( data ) {
   $.each(data, function(index, val) {
