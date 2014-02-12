@@ -54,7 +54,7 @@ div.show-page {
 
 header.show-page-header {
   text-align: center;
-  background-image: url(opacitydark.png);
+  background-image: url('opacitydark.png');
   padding-top: 3em;
 }
 
@@ -79,7 +79,7 @@ header.show-page-header {
 }
 
 div#show-content {
-  background: url(opacitydark.png);
+  background: image-url('opacitydark.png');
   width: 750px;
   /*border: 25px;*/
   margin: 0 auto;
@@ -109,7 +109,7 @@ div#show-content {
   text-transform: capitalize;
   text-align: center;
   font-weight: 300;
-  background: url(opacitydark.png);
+  background: image-url('opacitydark.png');
 }
 
 .show-page h3 {
@@ -147,7 +147,7 @@ div#show-content {
   text-align: center;
   font-size: 2em;
   font-weight: 300;
-  background: url(opacitydark.png);
+  background: image-url('opacitydark.png');
 }
 
 div.reviews-summary {
@@ -162,7 +162,7 @@ div.reviews-summary {
 }
 
 div.review-form {
-  background: url(opacitydark.png); 
+  background: image-url('opacitydark.png');
   margin: 0;
   padding: 0.4em;
   padding-right: 2em;
