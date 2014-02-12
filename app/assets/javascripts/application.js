@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require modernizr.custom
 //= require geolocation
+//= require modernizr.custom
 //= require map
 //= require modal
 //= require markets

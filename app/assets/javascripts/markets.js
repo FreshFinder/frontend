@@ -4,11 +4,6 @@ var mappy = L.mapbox.map("mappy", "pzula.h69mf89n", { zoomControl: false }).setV
 new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
 Map.mappy = mappy;
 
-$("#modal").hide();
-$(".modal-close").click(function (e){
-  $('#modal').hide();
-  });
-
 var coords = Geolocation.userPosition;
 var coordsForUrl = coords[0] + "," + coords[1];
 var marketData = "/api/v1/search/markets?zipcode=" + coordsForUrl;
