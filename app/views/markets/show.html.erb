@@ -1,6 +1,6 @@
 <div class="show-page">
   <header class="show-page-header">
-    <h1>FreshFinder <span>Find the farmers' markets near you...</span>
+    <h1><a href='/'>FreshFinder <span>Find the farmers' markets near you...</span></a>
     </h1>
   </header>
 
@@ -15,7 +15,9 @@
         <%= @market.address.city %>, <%= @market.address.state %>
         <%= @market.address.zipcode %>
       </div>
+         <% if @market.address.description.nil? %>
       <strong>Directions:</strong>  <%= @market.address.description %>
+        <% end %>
     </div>
 
     <div class="show-column">
@@ -34,22 +36,28 @@
         <% end %>
       </div>
 
-      <div class="season">
+    <div class="season">
+        <% if @market.season1.nil? %>
         <strong>Season:</strong>
         <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
         <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
         <%= @market.season3.start_month %>  <%= @market.season3.end_month %>
         <%= @market.season4.start_month %> <%= @market.season4.end_month %>
+       <% end %>
       </div>
     </div>
 
    <div class="show-column">
       <div class="products">
-        <strong>Products: </strong><%= @market.products.join(", ") %>
+        <% if @market.products.nil? %>
+          <strong>Products: </strong><%= @market.products.join(", ") %>
+        <% end %>
       </div>
 
       <div class="payments">
+         <% if @market.payment_types.nil? %>
         <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
+         <% end %>
       </div>
    </div>
 
