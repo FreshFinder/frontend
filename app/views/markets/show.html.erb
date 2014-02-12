@@ -15,8 +15,8 @@
         <%= @market.address.city %>, <%= @market.address.state %>
         <%= @market.address.zipcode %>
       </div>
-         <% if @market.address.description.nil? %>
-      <strong>Directions:</strong>  <%= @market.address.description %>
+        <% unless @market.address.description.nil? %>
+        <strong>Directions:</strong>  <%= @market.address.description %>
         <% end %>
     </div>
 
@@ -37,7 +37,7 @@
       </div>
 
     <div class="season">
-        <% if @market.season1.nil? %>
+        <% unless @market.season1.nil? %>
         <strong>Season:</strong>
         <%= @market.season1.start_month %> to <%= @market.season1.end_month %>
         <%= @market.season2.start_month %>  <%= @market.season2.end_month %>
@@ -49,13 +49,13 @@
 
    <div class="show-column">
       <div class="products">
-        <% if @market.products.nil? %>
+        <% unless @market.products.nil? %>
           <strong>Products: </strong><%= @market.products.join(", ") %>
         <% end %>
       </div>
 
       <div class="payments">
-         <% if @market.payment_types.nil? %>
+         <% unless @market.payment_types.nil? %>
         <strong>Payments Accepted:</strong> <%= @market.payment_types.join(", ") %>
          <% end %>
       </div>
@@ -94,7 +94,7 @@
   </div>
   <br>
     <div class="reviews-summary">
-      <h2>Reviews from this market:<h2>
+      <h2 class="review-title">Reviews from this market:<h2>
         <%= render partial:"reviews/review", collection: @reviews %>
     </div>
   </div>

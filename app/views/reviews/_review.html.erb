@@ -1,16 +1,12 @@
 <div class="market-reviews">
-  <strong><h5 class="title"><%= review.title %></h5></strong>
   <hr>
   <q><span class='gigantic'><%= review.content %></span></q>
 
-
-<div class='reviewer-profile'>
   <div class='gravatar'></div>
-    <% unless review.email.nil? %>
-      <h2 class="reviewer-email">  (<%= review.email %>)</h2>
+    <% unless review.email.empty? %>
+      <h2 class="reviewer-email">( <%= review.email %> )</h2>
     <% end %>
-    <% unless review.name.nil? %>
-      <h2 class="reviewer">~<%= review.name %></h2>
-    <% end %>
-  </div>
-</div>
+    <% unless review.name.empty? %>
+      <h2 class="reviewer">~ <%= review.name %></h2>
+    <% end %> 
+<br>

@@ -248,9 +248,13 @@ button.show-page  {
 .market-reviews {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
-  height: 8em;
+  height: 5em;
 }
 
+/*h2.review-title{
+font-family: 
+}
+*/
 
 h5.title {
   display: block;
@@ -261,41 +265,43 @@ h5.title {
 }
 
 .market-reviews hr{
-  padding: 0;
+  margin: 0;
 }
 
-.reviewer-profile h2{
+div.reviewer-profile{
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+h2 .reviewer, 
+h2 .reviewer-email{
   display: block;
-  font-size: 0.3em;
+  font-size: 0.5em;
   font-weight: italics;
   padding: 0;
-  margin:0;
+  margin:0 0.5em;
   text-align: left;
   float: right;
-}
-
-div.gravatar {
-  background: url(gravatar.png);
-  width: 40px;
-  height: 40px;
+  color: ;
 }
 
 span.gigantic {
-  margin-top: -1em; 
-  height: auto; 
-  font-size:1em; 
+  margin-top: -3em; 
+/*  height: auto; */
+  font-size:0.5em; 
 } 
 
 q:before { 
   content: '\201C'; 
-  font-size:300%;
+  font-size:1em;
   font-family: Times New Roman; 
   margin: 0;
+
 } 
 
 q:after { 
   content: '\201D'; 
-  font-size:300%; 
+  font-size:1em; 
   font-family: Times New Roman; 
   margin: 0;
 }
