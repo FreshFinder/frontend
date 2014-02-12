@@ -9,7 +9,7 @@
 /*------------------ home page ----------------*/
 body {
   margin:0;
-  padding:0; 
+  padding:0;
   }
 
 .stacker {
@@ -87,8 +87,8 @@ div#show-content {
 }
 
 .show-column1 {
-  -moz-column-count:2; 
-  -webkit-column-count:2; 
+  -moz-column-count:2;
+  -webkit-column-count:2;
   column-count:2;
   width: 720px;
   height: 200px;
@@ -96,11 +96,7 @@ div#show-content {
 }
 
 .show-column2 {
-  -moz-column-count:2; 
-  -webkit-column-count:2; 
-  column-count:2;
   width: 720px;
-  height: 150px;
   margin: 15px;
 }
 
@@ -140,9 +136,9 @@ div#show-content {
   font-weight: 300;
 }
 
-.show-page div.time, 
-.show-page div.season, 
-.show-page div.payments, 
+.show-page div.time,
+.show-page div.season,
+.show-page div.payments,
 .show-page div.products {
   text-align: left;
   font-size: 1.5em;
@@ -153,7 +149,11 @@ div#show-content {
 }
 
 /*=--------------- review form -------------------*/
-.cbp-mc-form, .reviews-summary {
+fieldset {
+  border:none;
+}
+
+.reviews-summary {
   width: 750px;
   position: relative;
   text-align: center;
@@ -161,8 +161,41 @@ div#show-content {
 
 .reviewer-info {
   border: 0px;
-  
 }
+
+.review-form label {
+  text-align: left;
+  float:left;
+}
+
+fieldset.review-name {
+  float:left;
+  width: 47%;
+}
+
+fieldset.review-email {
+  float:right;
+  width: 47%;
+}
+
+fieldset.review-body label {
+  float:left;
+  text-align:left;
+}
+
+fieldset.review-body input[type=text] {
+  width:100%;
+}
+
+.review-form textarea {
+  display:block;
+  width:100%
+}
+
+.top-form-wrapper {
+  overflow:hidden;
+}
+
 
 .review-body{
   border: 0px;
@@ -183,19 +216,21 @@ div.review-form, .reviews-summary {
   font-weight: 300;
   }
 
-button#close-form {
-  float: right;
-  padding-top: 0px;
-  padding-bottom: 1px;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: 3px;
-  margin-left: 3px;
-}  
+  button#close-form {
+    float: right;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    padding-right: 9px;
+    padding-left: 9px;
+    margin-right: 3px;
+    margin-left: 3px;
+    background: #fff;
+    border-radius: 30px;
+  }
 
 button.submit {
-      
-} 
+
+}
 
 .cbp-mc-column1 {
   padding: 10px;
@@ -217,7 +252,7 @@ button.submit {
   letter-spacing: 1px;
   cursor: pointer;
 }
- 
+
 .cbp-mc-form input,
 .cbp-mc-form textarea,
 .cbp-mc-form select {
@@ -231,7 +266,7 @@ button.submit {
   border: 1px solid #fff;
   background: transparent;
 }
- 
+
 .cbp-mc-form input:focus,
 .cbp-mc-form textarea:focus,
 .cbp-mc-form label:active + input,
@@ -239,7 +274,7 @@ button.submit {
     outline: none;
     border: 3px solid #10689a;
 }
- 
+
 .cbp-mc-form select:focus {
     outline: none;
 }
@@ -290,9 +325,9 @@ p.reviewer {
 }
 
 p.content {
-  margin-top: -1em; 
-  height: auto; 
-  font-size:.6em; 
+  margin-top: -1em;
+  height: auto;
+  font-size:.6em;
   font-weight: normal;
   text-align: left;
-} 
+}
