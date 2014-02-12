@@ -197,7 +197,8 @@ button#close-form {
   margin-left: 3px;
 }  
 
-button#submit {
+button.submit {
+      
 } 
 
 .cbp-mc-column1 {
