@@ -27,11 +27,13 @@ var loadMap = function(position) {
       var list = $(".listings");
       $.each(data, function(index, val){
           var street = val.address.street
+          
           if (street == null ) {
             street = ""
           } else {
             street = '<strong>' + street + '</strong>, '
           }
+
           $(list).append('<li><a class="icon icon-data market-item" data-market-id=' + val.id + '>' + val.name + '<p class="smaller">' + street + val.address.city + ', ' + val.address.state + '</p>' + '</a></li>');
        });
       });

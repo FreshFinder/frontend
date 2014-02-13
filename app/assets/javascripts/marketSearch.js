@@ -11,6 +11,12 @@ jQuery(document).ready(function() {
     $.getJSON( Search.route, function(data) {
       var list = $(".listings");
       list.empty();
+       if (data[0] === undefined) {
+          $(list).append("<li class='no-results'> Nothing Found </li><div class='sad-veggies'></div>)");
+          var map = Map.mappy;
+          map.setView([ 40.48086, -85.339523 ], 4);
+      };
+        
       $.each(data, function(index, market){
         if (index == 0) {
           var map = Map.mappy;
