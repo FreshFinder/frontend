@@ -4,7 +4,18 @@ class Schedule
 
   def initialize(market_schedule)
     @day = Date::DAYNAMES[market_schedule["day"]]
-    @start_time = Time.parse(market_schedule["start_time"]).strftime("%-I:00 %p")
-    @end_time = Time.parse(market_schedule["end_time"]).strftime("%-I:00 %p")
+    @start_time = parse_time(market_schedule, "start_time")
+    @end_time = parse_time(market_schedule, "end_time")
   end
+
+  private
+
+  def parse_time(schedule, attribute)
+    begin
+      Time.parse(schedule[attribute.to_s]).strftime("%-I:00 %p")
+    rescue TypeError
+      ""
+    end
+  end
+
 end
