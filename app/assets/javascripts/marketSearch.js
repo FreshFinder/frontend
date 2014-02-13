@@ -10,7 +10,14 @@ jQuery(document).ready(function() {
     Search.route = "/api/v1/search/markets?zipcode=" + Search.searchInput;
     $.getJSON( Search.route, function(data) {
       var list = $(".listings");
-      list.empty();
+        list.empty();
+         if (data[0] === undefined) {
+          $(list).append("<li class='no-results'> No Results </li><img class='sad-veggies'/>)");
+          var map = Map.mappy;
+           map.setView([ -100.679523, 40.52086 ], 3);
+        };
+        console.log(data.inspect);
+        console.log(data.class);
       $.each(data, function(index, market){
         if (index == 0) {
           var map = Map.mappy;

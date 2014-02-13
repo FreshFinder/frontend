@@ -71,6 +71,23 @@ header.show-page-header {
   color: #aca89a;
 }
 
+li.no-results {
+  font-size: 60%;
+  color: #aca89a;
+  font-weight: 200;
+  font-size: 2.625em;
+  padding-left: 0.7em;
+}
+
+img.sad-veggies {
+  background: url('sad_veg.jpg') no-repeat;
+  padding: 10px 10px;
+  width: 100%;
+  height: 15em;
+  border:none;
+  outline: none;
+}
+
 #page-container {
   margin: 0 auto;
   padding-top: 75px;
