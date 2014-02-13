@@ -10,14 +10,13 @@ jQuery(document).ready(function() {
     Search.route = "/api/v1/search/markets?zipcode=" + Search.searchInput;
     $.getJSON( Search.route, function(data) {
       var list = $(".listings");
-        list.empty();
-         if (data[0] === undefined) {
-          $(list).append("<li class='no-results'> No Results </li><img class='sad-veggies'/>)");
+      list.empty();
+       if (data[0] === undefined) {
+          $(list).append("<li class='no-results'> No Results </li><div class='sad-veggies'></div>)");
           var map = Map.mappy;
-           map.setView([ -100.679523, 40.52086 ], 3);
-        };
-        console.log(data.inspect);
-        console.log(data.class);
+          map.setView([ 40.48086, -85.339523 ], 4);
+      };
+        
       $.each(data, function(index, market){
         if (index == 0) {
           var map = Map.mappy;

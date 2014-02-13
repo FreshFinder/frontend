@@ -72,20 +72,18 @@ header.show-page-header {
 }
 
 li.no-results {
-  font-size: 60%;
+  font-size: 70%;
   color: #aca89a;
   font-weight: 200;
   font-size: 2.625em;
-  padding-left: 0.7em;
+  padding-left: 0.75em;
 }
 
-img.sad-veggies {
-  background: url('sad_veg.jpg') no-repeat;
-  padding: 10px 10px;
+div.sad-veggies {
+  background: url(sad_veg.jpg) no-repeat;
+  padding: 10px 1em;
   width: 100%;
   height: 15em;
-  border:none;
-  outline: none;
 }
 
 #page-container {
