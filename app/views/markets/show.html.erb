@@ -22,7 +22,7 @@
         <div class="products">
           <% unless @market.products.nil? %>
           <strong>Products: </strong>
-          <%= @market.products.join(',') %>
+          <%= @market.products.join(', ') %>
           <% end %>
         </div>
       </div>
@@ -53,7 +53,7 @@
 
     <br>
     <div class="reviews-summary">
-      <h2>Reviews for this market:</h2>
+      <h2>Reviews for this Market:</h2>
       <%= render partial:"reviews/review", collection: @reviews %>
     </div>
   </div>
