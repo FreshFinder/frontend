@@ -1,10 +1,10 @@
 FreshFinder:  
 ============
-##The Place to Find and Review Farmer's Markets
+##The Place to Find and Review Farmers' Markets
 
 [![Code Climate](https://codeclimate.com/repos/52f04f28e30ba07a88003382/badges/ab46d8f8841f0875ddea/gpa.png)](https://codeclimate.com/repos/52f04f28e30ba07a88003382/feed)
 
-This site can be found at www.freshfinder.us.  It is a site dedicated to finding fresh food in your area using USDA data. The end goal is to be able to have crowd-sourced reviews of the markets so that people understand the markets better (aka, what is sold, what is good, etc).
+This site can be found at www.freshfinder.us.  It is a site dedicated to finding farmers' markets and fresh food in your area using USDA data. The end goal is to be able to provide crowd-sourced reviews of the markets so that FreshFinder users have a more complete picture of market information (e.g., what is sold, what past visitors found to be good, etc).
 
 Homepage
 -------
@@ -32,10 +32,10 @@ Install all of the gems:
 
 `bundle`
 
-Make sure PostgreSQL is running on your local machine. Also, it would be ideal if after you grabbed the API repositories you set up foreman (install gem foreman), set up nginx and cloned the 'processes' repo).  Once all that is conducted and you have nginx running (sudo nginx), then you can...
+Make sure PostgreSQL is running on your local machine. The easiest way to get up and running is to set up foreman (install gem foreman) and nginx after you've cloned all of the API repositories.  Once these steps are complete and you have nginx running (sudo nginx), you can...
 
 `foreman start`
 
 Go to 'localhost:8080' to checkout the site. 
 
-*Project built on Rails 4.0.0, and uses Foundation*
+*Project built on Rails 4.0.0 with a custom front end.*
