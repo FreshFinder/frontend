@@ -127,6 +127,12 @@ div#show-content {
   border-radius: 3px 3px 0 0;
 }
 
+.show-page .season {
+  display: block;
+
+}
+
+
 .show-page .address{
   margin: 0;
   padding: 0.2em;
@@ -136,13 +142,16 @@ div#show-content {
   font-weight: 300;
 }
 
+.show-page div.payments {
+  text-transform: capitalize;
+}
+
 .show-page div.time,
 .show-page div.season,
 .show-page div.payments,
 .show-page div.products {
   text-align: left;
   font-size: 1.5em;
-  text-transform: capitalize;
   font-weight: 300;
   padding: 5px;
   margin: 0;
