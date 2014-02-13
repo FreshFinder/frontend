@@ -1,0 +1,7 @@
+<% [1, 2, 3, 4].each do |number| %>
+  <span class="schedule">
+    <% market.send(:"season#{number}").schedules.each do |schedule| %>
+      <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
+    <% end %>
+  </span>
+<% end %>

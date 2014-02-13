@@ -1,0 +1,8 @@
+<% [1, 2, 3, 4].each do |number| %>
+  <span class="season">
+    <% if market.send(:"season#{number}").start_month %>
+      <%= market.send(:"season#{number}").start_month %> to
+      <%= market.send(:"season#{number}").end_month %>
+    <% end %>
+  </span>
+<% end %>
