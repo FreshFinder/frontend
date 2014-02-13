@@ -1,0 +1,30 @@
+<%= form_tag "/markets/#{market_id}/reviews" do %>
+  <%= hidden_field_tag "market_id", "#{market_id}" %>
+
+  <div class="top-form-wrapper">
+    <%= field_set_tag nil, class:"review-name" do %>
+      <%= label_tag "name" %>
+      <%= text_field_tag "name" %>
+    <% end %>
+
+    <%= field_set_tag nil, class:"review-email" do %>
+      <%= label_tag "email" %>
+      <%= text_field_tag "email" %>
+    <% end %>
+  </div>
+
+  <%= field_set_tag nil, class:"review-body" do %>
+    <%= field_set_tag nil, class:"review-title" do %>
+      <%= label_tag "title", "Headline or summary" %>
+      <%= text_field_tag "title" %>
+    <% end %>
+
+    <%= field_set_tag nil, class:"review-content" do %>
+      <%= label_tag "content", "Your review" %>
+      <%= text_area_tag "content" %>
+    <% end %>
+
+  <% end %>
+
+  <button class="submit"> Submit your review! </button>
+<% end %>
