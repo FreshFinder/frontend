@@ -16,18 +16,8 @@
 
       <div class="show-column1">
         <div class="time">
-          <% @market.season1.schedules.each do |schedule| %>
-            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
-          <% end %>
-          <% @market.season2.schedules.each do |schedule| %>
-            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
-          <% end %>
-            <% @market.season4.schedules.each do |schedule| %>
-            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
-          <% end %>
-          <% @market.season3.schedules.each do |schedule| %>
-            <strong><%= schedule.day %></strong>: <%= schedule.start_time %> - <%= schedule.end_time %>
-          <% end %>
+          <%= render partial: 'schedule', locals: { market: @market } %>
+
         </div>
 
         <div class="products">
