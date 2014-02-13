@@ -1,4 +1,4 @@
-FreshFinder:  
+FreshFinder:
 ============
 ##The Place to Find and Review Farmers' Markets
 
@@ -9,7 +9,7 @@ This site can be found at www.freshfinder.us.  It is a site dedicated to finding
 Homepage
 -------
 
-![Homepage](https://s3-us-west-2.amazonaws.com/mappingkat/freshfinder.png)
+![Homepage](screenshot.png)
 
 
 Market Page
@@ -36,6 +36,6 @@ Make sure PostgreSQL is running on your local machine. The easiest way to get up
 
 `foreman start`
 
-Go to 'localhost:8080' to checkout the site. 
+Go to 'localhost:8080' to checkout the site.
 
 *Project built on Rails 4.0.0 with a custom front end.*
