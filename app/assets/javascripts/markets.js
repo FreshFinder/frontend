@@ -6,6 +6,11 @@ var loadMap = function(position) {
   new L.Control.Zoom({ position: 'topright' }).addTo(mappy);
   Map.mappy = mappy;
 
+    $.getScript("http://openweathermap.org/js/leaflet-layer.js", function(){
+    var validatorsLayer = new OsmJs.Weather.LeafletLayer({lang: 'en'});
+    mappy.addLayer(validatorsLayer);
+  });
+
   var coords = userPosition;
   var coordsForUrl = coords[0] + "," + coords[1];
   var marketData = "/api/v1/search/markets?zipcode=" + coordsForUrl;
